@@ -15,7 +15,8 @@ for x in range(4, usersNumber):
     isFalse = False
 
     try:
-        packetData = urllib.request.urlopen(url + str(x), data=None, timeout=500, cafile=None, capath=None, cadefault=False)
+        packetData = urllib.request.urlopen(url + str(x), data=None, timeout=500, cafile=None, capath=None,
+                                            cadefault=False)
     except urllib.error.HTTPError:
         isFalse = True
         usersNumber += 1
@@ -26,7 +27,7 @@ for x in range(4, usersNumber):
 
         data = json.loads(jsonString)
 
-        print('--*--*--*--*--*--*--*--*--*--*--*--*-- USUARIO ' + str(x) + '--*--*--*--*--*--*--*--*--*--*--*--*--')
+        print('--*--*--*--*--*--*--*--*--*--*--*--*-- USUARIO ' + str(x) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
 
         for y in data.keys():
             print('%s: %s' % (y, data[y]))
@@ -34,8 +35,6 @@ for x in range(4, usersNumber):
     else:
 
         print('ID: %s not found' % x)
-
-    print('n')
 
     packetData.close()
 
