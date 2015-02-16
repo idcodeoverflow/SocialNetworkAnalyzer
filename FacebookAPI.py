@@ -4,39 +4,59 @@ import urllib.error
 
 __author__ = 'David'
 
-url = 'https://graph.facebook.com/'
 
-usersNumber = int(input('How many users are we gonna search???: '))
-usersNumber += 4
-isFalse = False
+class FacebookAPI:
 
-for x in range(4, usersNumber):
+    def __init__(self, nUsers: int, token: str, printable: bool):
+        self.url = 'https://graph.facebook.com/'
+        self.token = token
 
-    isFalse = False
+        self._START_NUMBER_ = 4
 
-    try:
-        packetData = urllib.request.urlopen(url + str(x), data=None, timeout=500, cafile=None, capath=None, cadefault=False)
-    except urllib.error.HTTPError:
-        isFalse = True
-        usersNumber += 1
+        self.usersNumber = nUsers
+        self.usersNumber += self._START_NUMBER_
+        self.existsUser = False
+        self.limit = self.usersNumber + self._START_NUMBER_
+        self.printable = printable
 
-    jsonString = packetData.read().decode('utf-8')
 
-    if not isFalse:
 
-        data = json.loads(jsonString)
+    def getUsers(self):
+        currentUserId = self._START_NUMBER_
+        result = {}
+        while currentUserId < self.limit:
 
-        print('--*--*--*--*--*--*--*--*--*--*--*--*-- USUARIO ' + str(x) + '--*--*--*--*--*--*--*--*--*--*--*--*--')
+            self.existsUser = False
 
-        for y in data.keys():
-            print('%s: %s' % (y, data[y]))
+            try:
+                packetData = urllib.request.urlopen(self.url + str(currentUserId), data=None, timeout=500, cafile=None, capath=None,
+                                                    cadefault=False)
+            except urllib.error.HTTPError:
+                self.existsUser = True
+                self.limit += 1
 
-    else:
+            jsonString = packetData.read().decode('utf-8')
 
-        print('ID: %s not found' % x)
+            if not self.existsUser:
 
-    print('n')
+                data = json.loads(jsonString)
+                if self.printable:
+                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- USER ' + str(currentUserId) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
 
-    packetData.close()
+                    for y in data.keys():
+                        print('%s: %s' % (y, data[y]))
 
-input('Press any key to exit...')
+                for y in data.keys():
+                     result[y] = data[y]
+
+            else:
+                if self.printable:
+                    print('ID: %s not found' % currentUserId)
+
+            packetData.close()
+            currentUserId += 1
+        return result
+
+fb = FacebookAPI(4, "", True)
+fb.getUsers()
+
