@@ -6,7 +6,6 @@ __author__ = 'David'
 
 
 class FacebookAPI:
-
     def __init__(self, nUsers: int, token: str, printable: bool):
         self.url = 'https://graph.facebook.com/'
         self.token = token
@@ -14,22 +13,21 @@ class FacebookAPI:
         self._START_NUMBER_ = 4
 
         self.usersNumber = nUsers
-        self.usersNumber += self._START_NUMBER_
         self.existsUser = False
         self.limit = self.usersNumber + self._START_NUMBER_
         self.printable = printable
 
-
-
     def getUsers(self):
         currentUserId = self._START_NUMBER_
-        result = {}
-        while currentUserId < self.limit:
+        result = []
+        control = 0
+        while control < self.usersNumber:
 
             self.existsUser = False
 
             try:
-                packetData = urllib.request.urlopen(self.url + str(currentUserId), data=None, timeout=500, cafile=None, capath=None,
+                packetData = urllib.request.urlopen(self.url + str(currentUserId), data=None, timeout=500, cafile=None,
+                                                    capath=None,
                                                     cadefault=False)
             except urllib.error.HTTPError:
                 self.existsUser = True
@@ -40,23 +38,34 @@ class FacebookAPI:
             if not self.existsUser:
 
                 data = json.loads(jsonString)
+
+                try:
+                    data['link']
+                except KeyError:
+                    print("User ID: " + str(currentUserId) + " link is not available, will be discarded.")
+                    currentUserId += 1
+                    continue
+
                 if self.printable:
-                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- USER ' + str(currentUserId) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
+                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- USER ' + str(
+                        currentUserId) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
 
                     for y in data.keys():
                         print('%s: %s' % (y, data[y]))
 
-                for y in data.keys():
-                     result[y] = data[y]
+                control += 1
+
+                result.append(data)
 
             else:
                 if self.printable:
-                    print('ID: %s not found' % currentUserId)
+                    print('User ID: %s not found' % currentUserId)
 
             packetData.close()
+
             currentUserId += 1
+
         return result
 
-fb = FacebookAPI(4, "", True)
+fb = FacebookAPI(30, "", True)
 fb.getUsers()
-

@@ -22,3 +22,15 @@ class FacebookUser:
         self.locale = locale
         self.name = name
         self.userName = username
+
+    def __init__(self, map):
+        self.facebookUserId = map['ID']
+        self.firstName = map['first_name']
+        self.gender = map['gender']
+        self.lastName = map['last_name']
+        self.link = map['link']
+        self.locale = map['locale']
+        self.name = map['name']
+        self.userName = map['username']
+
+
