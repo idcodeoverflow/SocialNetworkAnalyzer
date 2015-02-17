@@ -11,7 +11,7 @@ class DBConnection:
             self.user = 'root'
             self.host = 'localhost'
             self.database = 'fb_dataset'
-            self.cnx
+            self.cnx = ''
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                 print('Something is wrong with your user name or password.')
@@ -21,17 +21,16 @@ class DBConnection:
                 print(err)
 
 
-    @staticmethod
+    def closeConnection(self):
+        try:
+            self.cnx.close()
+        except mysql.connector.Error:
+            print('Something went wrong at connection closing.')
+
+
     def openConnection(self):
         self.cnx = mysql.connector.connect(user=self.user, password=self.password,
                                            host=self.host,
                                            database=self.database)
         return self.cnx
 
-
-    @staticmethod
-    def closeConnection(self):
-        try:
-            self.cnx.close()
-        except mysql.connector.Error:
-            print('Something went wrong at connection closing.')
