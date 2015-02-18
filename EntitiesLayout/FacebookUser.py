@@ -23,14 +23,14 @@ class FacebookUser:
         self.name = name
         self.userName = username
 
-    def __init__(self, map):
-        self.facebookUserId = map['ID']
-        self.firstName = map['first_name']
-        self.gender = map['gender']
-        self.lastName = map['last_name']
-        self.link = map['link']
-        self.locale = map['locale']
-        self.name = map['name']
-        self.userName = map['username']
+    def __init__(self, mp):
+        self.facebookUserId = mp['id']
+        self.firstName = mp['first_name']
+        self.gender = mp['gender']
+        self.lastName = mp['last_name']
+        self.link = mp['link']
+        self.locale = mp['locale']
+        self.name = mp['name']
+        self.userName = mp['username']
 
 
