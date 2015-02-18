@@ -1,20 +1,22 @@
 import mysql
 
-from BDLayout.DBConnection import DBConnection
+from DBLayout.DBConnection import DBConnection
 from EntitiesLayout import FacebookUser
 
 
 __author__ = 'David'
 
-from __future__ import print_function
-from datetime import date, datetime, timedelta
 
 
 class FacebookUserDB:
 
+    def __init__(self):
+        print('Create object to access table user in DB.')
+
     def insertUser(self, user: FacebookUser):
         try:
-            cnx = DBConnection()
+            db = DBConnection()
+            cnx = db.openConnection()
             cursor = cnx.cursor()
             addFBUserQuery = 'INSERT INTO user(idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username)' \
                              'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s);'
@@ -23,7 +25,7 @@ class FacebookUserDB:
             cursor.execute(addFBUserQuery, dataUser)
             cnx.commit()
             cursor.close()
-            cnx.closeConnection()
+            db.closeConnection()
 
         except mysql.connector.Error:
             print('Error writing a Facebook User in the DB.')

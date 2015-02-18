@@ -1,3 +1,5 @@
+from DBLayout.FacebookUserDB import FacebookUserDB
+from EntitiesLayout.FacebookUser import FacebookUser
 import json
 import urllib.request
 import urllib.error
@@ -10,7 +12,7 @@ class FacebookAPI:
         self.url = 'https://graph.facebook.com/'
         self.token = token
 
-        self._START_NUMBER_ = 4
+        self._START_NUMBER_ = 11
 
         self.usersNumber = nUsers
         self.existsUser = False
@@ -67,5 +69,11 @@ class FacebookAPI:
 
         return result
 
-fb = FacebookAPI(30, "", True)
-fb.getUsers()
+
+fb = FacebookAPI(8997, "", True)
+users = fb.getUsers()
+userAccess = FacebookUserDB()
+for data in users:
+    user = FacebookUser(data)
+    userAccess.insertUser(user)
+    print(data)

@@ -11,7 +11,6 @@ class DBConnection:
             self.user = 'root'
             self.host = 'localhost'
             self.database = 'fb_dataset'
-            self.cnx = ''
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                 print('Something is wrong with your user name or password.')
