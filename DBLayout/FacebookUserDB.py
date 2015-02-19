@@ -1,7 +1,7 @@
 import mysql
 
 from DBLayout.DBConnection import DBConnection
-from EntitiesLayout import FacebookUser
+from EntitiesLayout.FacebookUser import FacebookUser
 
 
 __author__ = 'David'
@@ -30,3 +30,65 @@ class FacebookUserDB:
         except mysql.connector.Error:
             print('Error writing a Facebook User in the DB.')
 
+    def readUser(self, id: int):
+        user = FacebookUser()
+        mp = {}
+        try:
+            db = DBConnection()
+            cnx = db.openConnection()
+            cursor = cnx.cursor()
+            readFBUserQuery = 'SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username ' \
+                              'FROM user WHERE facebookUserID = %s;'
+
+            dataUser = id
+
+            cursor.execute(readFBUserQuery, dataUser)
+
+            for (idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username) in cursor:
+                mp['id'] = facebookUserID
+                mp['first_name'] = firstName
+                mp['gender'] = gender
+                mp['last_name'] = lastName
+                mp['link'] = link
+                mp['locale'] = locale
+                mp['name'] = name
+                mp['username'] = username
+                user = FacebookUser(mp)
+
+            cursor.close()
+            db.closeConnection()
+
+        except mysql.connector.Error:
+            print('Error reading a Facebook User in the DB.')
+        return user
+
+    def readUsers(self):
+        users = []
+        mp = {}
+        try:
+            db = DBConnection()
+            cnx = db.openConnection()
+            cursor = cnx.cursor()
+            readFBUserQuery = 'SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username ' \
+                              'FROM user;'
+
+            cursor.execute(readFBUserQuery)
+
+            for (idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username) in cursor:
+                mp['id'] = facebookUserID
+                mp['first_name'] = firstName
+                mp['gender'] = gender
+                mp['last_name'] = lastName
+                mp['link'] = link
+                mp['locale'] = locale
+                mp['name'] = name
+                mp['username'] = username
+                users.append(FacebookUser(mp))
+
+            cursor.close()
+            db.closeConnection()
+
+        except mysql.connector.Error as ex:
+            print(ex.fp.read())
+            print('Error reading a Facebook User in the DB.')
+        return users
