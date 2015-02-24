@@ -27,8 +27,11 @@ class FacebookUserDB:
             cursor.close()
             db.closeConnection()
 
-        except mysql.connector.Error:
+        except mysql.connector.Error as err:
+            print(err)
             print('Error writing a Facebook User in the DB.')
+        except AttributeError as err:
+            print('Register can\'t be stored.')
 
     def readUser(self, id: int):
         user = FacebookUser()

@@ -3,6 +3,7 @@ import urllib.request
 import urllib.error
 
 from DBLayout.FacebookUserDB import FacebookUserDB
+from EntitiesLayout.FacebookUser import FacebookUser
 
 
 __author__ = 'David'
@@ -11,18 +12,17 @@ __author__ = 'David'
 class FacebookAPI:
     def __init__(self, nUsers: int, token: str, printable: bool):
         self.url = 'https://graph.facebook.com/'
+        self.fbURL = 'https://www.facebook.com/'
         self.token = token
-
-        self._START_NUMBER_ = 4
-        self.currentUserId = 0
-
+        self.defTimeout = 500
+        self._START_NUMBER_ = 2205
+        self.currentUserId = self._START_NUMBER_
         self.usersNumber = nUsers
         self.existsUser = False
         self.limit = self.usersNumber + self._START_NUMBER_
         self.printable = printable
 
     def getUsers(self):
-        self.currentUserId = self._START_NUMBER_
         result = []
         control = 0
 
@@ -32,15 +32,17 @@ class FacebookAPI:
             self.existsUser = False
 
             try:
-                packetData = urllib.request.urlopen(self.url + str(self.currentUserId), data=None, timeout=500, cafile=None,
+                packetData = urllib.request.urlopen(self.url + str(self.currentUserId), data=None, timeout=self.defTimeout, cafile=None,
                                                     capath=None,
                                                     cadefault=False)
+                jsonString = packetData.read().decode('utf-8')
+                packetData.close()
             except urllib.error.HTTPError as e:
                 self.existsUser = True
                 self.limit += 1
                 print(e.fp.read())
 
-            jsonString = packetData.read().decode('utf-8')
+
 
             if not self.existsUser:
 
@@ -68,11 +70,11 @@ class FacebookAPI:
                 if self.printable:
                     print('User ID: %s not found' % self.currentUserId)
 
-            packetData.close()
+
 
             self.currentUserId += 1
 
-            print(str(control / self.usersNumber) + '% completed. ' + str(control) + ' of ' + str(self.usersNumber))
+            print(str(100.0 * control / self.usersNumber) + '% completed. ' + str(control) + ' of ' + str(self.usersNumber))
 
         return result
 
@@ -93,7 +95,7 @@ class FacebookAPI:
             self.existsPost = False
 
             try:
-                packetData = urllib.request.urlopen(self.url + str(self.currentUserId) + '/statuses', data=None, timeout=500, cafile=None,
+                packetData = urllib.request.urlopen(self.url + str(self.currentUserId) + '/statuses', data=None, timeout=self.defTimeout, cafile=None,
                                                     capath=None,
                                                     cadefault=False)
             except urllib.error.HTTPError as e:
@@ -108,7 +110,7 @@ class FacebookAPI:
                 data = json.loads(jsonString)
 
                 if self.printable:
-                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- POST ' + str(
+                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- POST from: ' + str(
                         self.currentUserId) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
 
                     for y in data.keys():
@@ -128,52 +130,44 @@ class FacebookAPI:
         return result
 
 
-    def getProfilePage(fbUser: FacebookUser, printable: bool):
+    def getProfilePage(self, fbUser: FacebookUser, printable: bool):
         profilePage = ''
-            self.existsPost = False
 
-            try:
-                packetData = urllib.request.urlopen(self.url + str(self.currentUserId) + '/statuses', data=None, timeout=500, cafile=None,
-                                                    capath=None,
-                                                    cadefault=False)
-            except urllib.error.HTTPError as e:
-                self.existsPost = True
-                self.limit += 1
-                print(e.fp.read())
+        try:
+            packetData = urllib.request.urlopen(self.url + str(self.currentUserId), data=None,
+                                                timeout=self.defTimeout, cafile=None,
+                                                capath=None,
+                                                cadefault=False)
+        except urllib.error.HTTPError as e:
+            self.existsProfile = True
+            self.limit += 1
+            print(e.fp.read())
 
-            jsonString = packetData.read().decode('utf-8')
+        profilePage = packetData.read().decode('utf-8')
 
-            if not self.existsPost:
+        if not self.existsProfile:
 
-                data = json.loads(jsonString)
+           if self.printable:
+                print('--*--*--*--*--*--*--*--*--*--*--*--*-- Profile Page of: ' + str(
+                    self.currentUserId + ' ' + fbUser.name) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
+                print(profilePage)
 
-                if self.printable:
-                    print('--*--*--*--*--*--*--*--*--*--*--*--*-- POST ' + str(
-                        self.currentUserId) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
+        else:
+            if self.printable:
+                print('Profile Page of User ID: %s not found' % self.currentUserId)
 
-                    for y in data.keys():
-                        print('%s: %s' % (y, data[y]))
+        packetData.close()
 
+        return profilePage
 
-                result.append(data)
-
-            else:
-                if self.printable:
-                    print('Post from User ID: %s not found' % self.currentUserId)
-
-            packetData.close()
-
-            self.currentUserId += 1
-
-        return result
-        return
-
-fb = FacebookAPI(0, "", True)
-
+fb = FacebookAPI(5, "", True)
+userAccess = FacebookUserDB()
 for i in range(0,450,1):
 
-    user = fb.currentUserId
-    fb = FacebookAPI(20, "", True)
-    fb.currentUserId = user
-    users = fb.getPosts()
-    userAccess = FacebookUserDB()
+    #user = fb.currentUserId
+    #fb = FacebookAPI(5, "", True)
+    #fb.currentUserId = user
+    users = fb.getUsers()
+    for u in users:
+        userAccess.insertUser(FacebookUser(u))
+

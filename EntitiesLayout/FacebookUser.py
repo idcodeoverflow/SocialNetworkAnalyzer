@@ -2,15 +2,6 @@ __author__ = 'David'
 
 
 class FacebookUser:
-    def __init__(self):
-        self.facebookUserId = 0
-        self.firstName = ""
-        self.gender = ""
-        self.lastName = ""
-        self.link = ""
-        self.locale = ""
-        self.name = ""
-        self.userName = ""
 
     @classmethod
     def ini(self, facebookuserid: int, firstname: str, gender: str, lastname: str, link: str, locale: str,
