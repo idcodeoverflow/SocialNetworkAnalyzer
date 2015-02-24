@@ -34,7 +34,7 @@ class FacebookUserDB:
             print('Register can\'t be stored.')
 
     def readUser(self, id: int):
-        user = FacebookUser()
+        user = FacebookUser({})
         mp = {}
         try:
             db = DBConnection()
@@ -56,12 +56,13 @@ class FacebookUserDB:
                 mp['locale'] = locale
                 mp['name'] = name
                 mp['username'] = username
-                user = FacebookUser(mp)
+                user = (FacebookUser(mp))
 
             cursor.close()
             db.closeConnection()
 
-        except mysql.connector.Error:
+        except mysql.connector.Error as ex:
+            print(ex)
             print('Error reading a Facebook User in the DB.')
         return user
 

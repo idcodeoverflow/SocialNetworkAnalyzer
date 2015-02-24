@@ -3,6 +3,9 @@ __author__ = 'David'
 
 class FacebookUser:
 
+    userName = ''
+    name = ''
+
     @classmethod
     def ini(self, facebookuserid: int, firstname: str, gender: str, lastname: str, link: str, locale: str,
             name: str, username: str):
@@ -32,3 +35,4 @@ class FacebookUser:
         return '(' + str(
             self.facebookUserId) + ', ' + self.firstName + ', ' + self.gender + ', ' + self.lastName + ', ' + \
                self.link + ', ' + self.locale + ', ' + self.name + ', ' + self.userName + ')'
+

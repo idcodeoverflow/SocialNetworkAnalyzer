@@ -3,7 +3,7 @@ import urllib.request
 import urllib.error
 
 from DBLayout.FacebookUserDB import FacebookUserDB
-from EntitiesLayout.FacebookUser import FacebookUser
+from EntitiesLayout.FacebookUser import *
 
 
 __author__ = 'David'
@@ -21,11 +21,11 @@ class FacebookAPI:
         self.existsUser = False
         self.limit = self.usersNumber + self._START_NUMBER_
         self.printable = printable
+        self.existsProfile = False
 
     def getUsers(self):
         result = []
         control = 0
-
 
         while control < self.usersNumber:
 
@@ -41,8 +41,6 @@ class FacebookAPI:
                 self.existsUser = True
                 self.limit += 1
                 print(e.fp.read())
-
-
 
             if not self.existsUser:
 
@@ -129,12 +127,10 @@ class FacebookAPI:
 
         return result
 
-
-    def getProfilePage(self, fbUser: FacebookUser, printable: bool):
-        profilePage = ''
+    def getProfilePage(self, fbUser: FacebookUser):
 
         try:
-            packetData = urllib.request.urlopen(self.url + str(self.currentUserId), data=None,
+            packetData = urllib.request.urlopen(self.fbURL + '/' + fbUser.userName, data=None,
                                                 timeout=self.defTimeout, cafile=None,
                                                 capath=None,
                                                 cadefault=False)
@@ -149,7 +145,7 @@ class FacebookAPI:
 
            if self.printable:
                 print('--*--*--*--*--*--*--*--*--*--*--*--*-- Profile Page of: ' + str(
-                    self.currentUserId + ' ' + fbUser.name) + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
+                    self.currentUserId) + ' ' + fbUser.name + ' --*--*--*--*--*--*--*--*--*--*--*--*--')
                 print(profilePage)
 
         else:
@@ -162,12 +158,13 @@ class FacebookAPI:
 
 fb = FacebookAPI(5, "", True)
 userAccess = FacebookUserDB()
-for i in range(0,450,1):
+# for i in range(0,450,1):
+#     users = fb.getUsers()
+#     for u in users:
+#         userAccess.insertUser(FacebookUser(u))
 
-    #user = fb.currentUserId
-    #fb = FacebookAPI(5, "", True)
-    #fb.currentUserId = user
-    users = fb.getUsers()
-    for u in users:
-        userAccess.insertUser(FacebookUser(u))
+u = userAccess.readUser(4)
+
+fb.getProfilePage(u)
+
 
