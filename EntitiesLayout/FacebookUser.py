@@ -3,6 +3,7 @@ __author__ = 'David'
 
 class FacebookUser:
 
+    facebookUserId = 0
     userName = ''
     name = ''
 
