@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Fix issues in Login method.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/HTMLTreatment.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/HTMLTreatment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prueba.py" afterPath="$PROJECT_DIR$/Prueba.py" />
+    <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add Hex Character replacement for html treatment">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
@@ -78,7 +73,7 @@
       <file leaf-file-name="HexCharacterMapping.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8977273" vertical-offset="0" max-vertical-offset="5593">
+            <state vertical-scroll-proportion="2.904328" vertical-offset="0" max-vertical-offset="5593">
               <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
               <folding />
             </state>
@@ -98,12 +93,11 @@
       <file leaf-file-name="FacebookProfilePageDB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="969">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="986">
+              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <marker date="1425059040568" expanded="true" signature="465:605" placeholder="INSERT INTO ..." />
-                <marker date="1425059040568" expanded="true" signature="1245:1346" placeholder="SELECT idPro..." />
+                <marker date="1425062920020" expanded="true" signature="466:606" placeholder="INSERT INTO ..." />
+                <marker date="1425062920020" expanded="true" signature="1246:1347" placeholder="SELECT idPro..." />
               </folding>
             </state>
           </provider>
@@ -115,7 +109,6 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1751">
               <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
                 <marker date="1425059025179" expanded="true" signature="440:618" placeholder="INSERT INTO ..." />
                 <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
                 <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
@@ -603,7 +596,13 @@
       <option name="project" value="LOCAL" />
       <updated>1425055371171</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add Hex Character replacement for html treatment">
+      <created>1425062921571</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1425062921572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -632,11 +631,12 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23778501" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23817292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20045386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -644,7 +644,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -696,7 +695,8 @@
     <MESSAGE value="Add classes FacebookPost and FacebookComment" />
     <MESSAGE value="Add HTML Treatment for pre-processing" />
     <MESSAGE value="Fix issues in Login method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix issues in Login method." />
+    <MESSAGE value="Add Hex Character replacement for html treatment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Hex Character replacement for html treatment" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -752,7 +752,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
             <marker date="1425059025179" expanded="true" signature="440:618" placeholder="INSERT INTO ..." />
             <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
             <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
@@ -1066,12 +1065,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="969">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="986">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1425059040568" expanded="true" signature="465:605" placeholder="INSERT INTO ..." />
-            <marker date="1425059040568" expanded="true" signature="1245:1346" placeholder="SELECT idPro..." />
+            <marker date="1425062920020" expanded="true" signature="466:606" placeholder="INSERT INTO ..." />
+            <marker date="1425062920020" expanded="true" signature="1246:1347" placeholder="SELECT idPro..." />
           </folding>
         </state>
       </provider>
@@ -1081,7 +1079,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1751">
           <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
             <marker date="1425059025179" expanded="true" signature="440:618" placeholder="INSERT INTO ..." />
             <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
             <marker date="1425059025179" expanded="true" signature="1347:1500" placeholder="SELECT idUse..user..." />
@@ -1131,7 +1128,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8977273" vertical-offset="0" max-vertical-offset="5593">
+        <state vertical-scroll-proportion="2.904328" vertical-offset="0" max-vertical-offset="5593">
           <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
           <folding />
         </state>
