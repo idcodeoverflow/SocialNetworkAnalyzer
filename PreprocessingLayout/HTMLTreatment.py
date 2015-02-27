@@ -35,8 +35,7 @@ class HTMLTreatment:
         return self.paragraphs
 
 
-h = HTMLTreatment('123<--comentario 1-->basura-<-><--comentario 2--><--comentario 3--><p>parrafo 1</p>basura-<->'
-                  '<p>parrafo 2</p><p>parrafo 3</p>')
+h = HTMLTreatment(1, '')
 for i in h.extractParagraphs():
     print(i)
 for i in h.extractComments():

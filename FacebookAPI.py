@@ -4,9 +4,8 @@ import urllib.response
 import urllib.parse
 import urllib.error
 import http.cookiejar
-import facepy
-from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 
+from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
 from EntitiesLayout.FacebookProfilePage import FacebookProfilePage
 from EntitiesLayout.FacebookUser import *
@@ -147,7 +146,7 @@ u = userAccess.readUsers()
 profilePageAccess = FacebookProfilePageDB()
 mail = input('Type your email:')
 password = input('Type your password:')
-fb.login2('respaldos.remex2013@gmail.com', 'remex2013')
+fb.login2(mail, password)
 for i in u:
     print(i)
     profilePageAccess.insertProfilePage(FacebookProfilePage(i, fb.getProfilePage(i)))
