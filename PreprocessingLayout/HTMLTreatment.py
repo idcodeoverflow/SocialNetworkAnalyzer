@@ -1,3 +1,5 @@
+from PreprocessingLayout.HexCharacterMapping import HexCharacterMapping
+
 __author__ = 'David'
 
 
@@ -8,6 +10,12 @@ class HTMLTreatment:
 
     def __init__(self, html: str):
         self.html = html
+
+    def replaceHexCharacters(self):
+        chars = HexCharacterMapping()
+        for char in chars.characters.keys():
+            self.html = self.html.replace(char, chars.characters[char])
+
 
     def getIniEnd(self, lIni: str, lEnd: str, ini: int=0, end: int=0):
         if ini != 0 or end != 0:
@@ -34,9 +42,3 @@ class HTMLTreatment:
             ini, end = self.getIniEnd('<p>', '</p>', end, self.html.__len__())
         return self.paragraphs
 
-
-h = HTMLTreatment(1, '')
-for i in h.extractParagraphs():
-    print(i)
-for i in h.extractComments():
-    print(i)

@@ -40,10 +40,10 @@ class FacebookUserDB:
             db = DBConnection()
             cnx = db.openConnection()
             cursor = cnx.cursor()
-            readFBUserQuery = 'SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username ' \
-                              'FROM user WHERE facebookUserID = %s;'
+            readFBUserQuery = ("SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username "
+                               "FROM user WHERE facebookUserID = %s;")
 
-            dataUser = id
+            dataUser = (id,)
 
             cursor.execute(readFBUserQuery, dataUser)
 
