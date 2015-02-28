@@ -135,21 +135,7 @@ class FacebookAPI:
         print(html)
 
 
-fb = FacebookAPI(5, "", True)
-userAccess = FacebookUserDB()
-# for i in range(0, 450, 1):
-#     users = fb.getUsers()
-#     for u in users:
-#         userAccess.insertUser(FacebookUser(u))
 
-u = userAccess.readUsers()
-profilePageAccess = FacebookProfilePageDB()
-mail = input('Type your email:')
-password = input('Type your password:')
-fb.login2(mail, password)
-for i in u:
-    print(i)
-    profilePageAccess.insertProfilePage(FacebookProfilePage(i, fb.getProfilePage(i)))
 
 
 
