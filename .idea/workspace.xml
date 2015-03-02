@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add Hex Character replacement for html treatment">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
-      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\HTMLTreatment.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
-      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\HexCharacterMapping.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/html/HexCharacterMapping.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prueba.py" afterPath="$PROJECT_DIR$/Prueba.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
@@ -87,8 +85,18 @@
       <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31911263" vertical-offset="0" max-vertical-offset="586">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.609215" vertical-offset="0" max-vertical-offset="586">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestrictedSymbolsMapping.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,6 +159,7 @@
         <option value="$PROJECT_DIR$/PreprocessingLayout/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py" />
         <option value="$PROJECT_DIR$/Prueba.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
       </list>
     </option>
@@ -745,13 +754,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookUser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="714">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookPost.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="527">
@@ -1128,10 +1130,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31911263" vertical-offset="0" max-vertical-offset="586">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.609215" vertical-offset="0" max-vertical-offset="586">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>

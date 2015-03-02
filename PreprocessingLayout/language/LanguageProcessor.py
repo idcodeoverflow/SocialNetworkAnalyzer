@@ -1,3 +1,5 @@
+from PreprocessingLayout.language.RestrictedSymbolsMapping import RestrictedSymbolsMapping
+
 __author__ = 'David'
 
 
@@ -9,4 +11,12 @@ class LanguageProcessor:
         self.text = text
 
 
-    def getTokens
+    def getTokens(self):
+        return self.text.split(' ')
+
+    def removeSymbols(self):
+        symbols = RestrictedSymbolsMapping().symbols
+        for key in symbols.keys():
+            self.text.replace(key, symbols[key])
+
+    
