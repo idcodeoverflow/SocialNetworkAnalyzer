@@ -1,4 +1,4 @@
-from PreprocessingLayout.HexCharacterMapping import HexCharacterMapping
+from PreprocessingLayout.html import HexCharacterMapping
 
 __author__ = 'David'
 
