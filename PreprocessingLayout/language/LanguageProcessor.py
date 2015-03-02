@@ -19,4 +19,3 @@ class LanguageProcessor:
         for key in symbols.keys():
             self.text.replace(key, symbols[key])
 
-    
