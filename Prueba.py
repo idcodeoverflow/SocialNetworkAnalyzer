@@ -1,8 +1,6 @@
 from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
-from EntitiesLayout.FacebookProfilePage import FacebookProfilePage
-from FacebookAPI import FacebookAPI
-from PreprocessingLayout.HTMLTreatment import HTMLTreatment
+from PreprocessingLayout.html import HTMLTreatment
 
 accessUser = FacebookUserDB()
 accessProfile = FacebookProfilePageDB()
