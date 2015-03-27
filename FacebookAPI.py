@@ -5,9 +5,6 @@ import urllib.parse
 import urllib.error
 import http.cookiejar
 
-from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
-from DBLayout.FacebookUserDB import FacebookUserDB
-from EntitiesLayout.FacebookProfilePage import FacebookProfilePage
 from EntitiesLayout.FacebookUser import *
 
 
@@ -115,7 +112,7 @@ class FacebookAPI:
 
         return profilePage
 
-    def login2(self, user: str, password: str):
+    def login(self, user: str, password: str):
         cj = self.cj
         opener = self.opener
         opener.addheaders = self.headers
@@ -133,6 +130,50 @@ class FacebookAPI:
             print
             "failed login"
         print(html)
+
+    def getLikesPage(self, userId: int, postId: str):
+        try:
+            link = self.fbURL + '/browse/likes?id=' + postId + '&actorid=' + str(userId)
+            packetData = self.opener.open(link)
+            profilePage = packetData.read().decode('utf-8')
+            packetData.close()
+            if(profilePage.contains('No se han encontrado resultados.')):
+                return ''
+        except urllib.error.HTTPError as e:
+            self.existsPostCount = True
+            self.limit += 1
+            print(e.fp.read())
+
+        if not self.existsPostCount:
+            tempo = 0
+
+        else:
+            if self.printable:
+                print('Like\'s count Page % not found' % (link))
+
+        return profilePage
+
+    def getPostPage(self, user: FacebookUser, postId: int):
+        try:
+            link = user.link + '/posts/' + str(postId)
+            packetData = self.opener.open(link)
+            profilePage = packetData.read().decode('utf-8')
+            packetData.close()
+            if(profilePage.contains('No se han encontrado resultados.')):
+                return ''
+        except urllib.error.HTTPError as e:
+            self.existsPostCount = True
+            self.limit += 1
+            print(e.fp.read())
+
+        if not self.existsPostCount:
+            tempo = 0
+
+        else:
+            if self.printable:
+                print('Like\'s count Page % not found' % (link))
+
+        return profilePage
 
 
 

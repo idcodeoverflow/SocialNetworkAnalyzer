@@ -1,21 +1,27 @@
+
+
 __author__ = 'David'
 
 
 class FacebookComment:
-    def __init__(self):
-        self.facebookCommentID = 0
-        self.message = ""
-        self.likesCount = 0
-        self.facebookPostID = 0
 
-    def __init__(self, facebookCommentID: int, message: str, likesCount: int, facebookPostID: int):
-        self.facebookCommentID = facebookCommentID
-        self.message = message
-        self.likesCount = likesCount
-        self.facebookPostID = facebookPostID
+    facebookCommentID = 0
+    fbId = 0
+    legacyId = 0
+    author = 0
+    time = 0
+    text = ""
+    likesCount = 0
+    facebookPostID = 0
 
-    def __init__(self, mapa):
-        self.facebookCommentID = mapa['']
-        self.message = mapa['']
-        self.likesCount = mapa['']
-        self.facebookPostID = mapa['']
+    def __init__(self, mapa, postId: int):
+        try:
+            self.facebookCommentID = mapa['id']
+            self.fbId = mapa['fbid']
+            self.legacyId = mapa['legacyid']
+            self.text = (mapa['body'])['text']
+            self.time = (mapa['timestamp'])['time']
+            self.likesCount = mapa['likecount']
+            self.facebookPostID = postId
+        except KeyError:
+            print('A key is missing, register will be discarded')

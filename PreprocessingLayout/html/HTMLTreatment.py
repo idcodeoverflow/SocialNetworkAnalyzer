@@ -1,4 +1,4 @@
-from PreprocessingLayout.html import HexCharacterMapping
+from PreprocessingLayout.html.HexCharacterMapping import HexCharacterMapping
 
 __author__ = 'David'
 
@@ -26,7 +26,6 @@ class HTMLTreatment:
         tempHTML = self.html[:ini - 1]
         tempHTML += self.html[end + 1:]
 
-
         while ini > -1 and end > -1:
 
             self.html = tempHTML
@@ -41,7 +40,6 @@ class HTMLTreatment:
 
         if iniLen > self.html.__len__():
             self.html = tempHTML
-
 
     def getIniEnd(self, lIni: str, lEnd: str, ini: int=0, end: int=0):
         if ini != 0 or end != 0:
@@ -85,3 +83,27 @@ class HTMLTreatment:
 
         return text
 
+    def countLikes(self):
+        likesCount = self.html.count('Agregar a mis amigos')
+        return likesCount
+
+    def getFacebookComments(self):
+        comms = []
+        text = ''
+        self.replaceHexCharacters()
+        ini, end = self.getIniEnd('<script>require("TimeSlice").guard(function() {bigPipe.onPageletArrive(', '</script>')
+        ini -= 1
+        while ini > -1:
+            comms.append(self.html[ini + 71: end])
+        return comms
+
+    def getFBIds(self):
+        lis = {}
+        self.replaceHexCharacters()
+        ini, end = self.getIniEnd('fbid=', '&')
+        ini -= 1
+        self.paragraphs = []
+        while ini > -1:
+            lis[self.html[ini + 6: end]] = '1'
+            ini, end = self.getIniEnd('?fbid=', '&', end, self.html.__len__())
+        return lis.keys()
