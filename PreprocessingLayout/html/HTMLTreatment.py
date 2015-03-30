@@ -91,10 +91,10 @@ class HTMLTreatment:
         comms = []
         text = ''
         self.replaceHexCharacters()
-        ini, end = self.getIniEnd('<script>require("TimeSlice").guard(function() {bigPipe.onPageletArrive(', '</script>')
-        ini -= 1
-        while ini > -1:
-            comms.append(self.html[ini + 71: end])
+        ini, end = self.getIniEnd("""<script>bigPipe.beforePageletArrive("stream_pagelet")</script>
+<script>require("TimeSlice").guard(function() {bigPipe.onPageletArrive(""", '"onPageletArrive stream_pagelet")()')
+        if ini > -1:
+            comms.append(self.html[ini : end])
         return comms
 
     def getFBIds(self):
