@@ -1,4 +1,5 @@
 import mysql
+from DBLayout.FacebookUserDB import FacebookUserDB
 
 from EntitiesLayout.FacebookProfilePage import FacebookProfilePage
 from DBLayout.DBConnection import DBConnection
@@ -44,6 +45,27 @@ class FacebookProfilePageDB:
 
             for (idProfilePage, profilePage, facebookUserID, visitedOn) in cursor:
                 self.profilesPages.append(FacebookProfilePage(user, profilePage))
+            cursor.close()
+            db.closeConnection()
+
+        except mysql.connector.Error as ex:
+            print(ex)
+            print('Error reading a Facebook Profile in the DB.')
+        return self.profilesPages
+
+    def readProfilesPages(self):
+        try:
+            db = DBConnection()
+            cnx = db.openConnection()
+            cursor = cnx.cursor()
+            userAccess = FacebookUserDB()
+            readFBUserQuery = 'SELECT idProfilePage, profilePage, facebookUserID, visitedOn FROM profilePage'
+
+
+            cursor.execute(readFBUserQuery)
+
+            for (idProfilePage, profilePage, facebookUserID, visitedOn) in cursor:
+                self.profilesPages.append(FacebookProfilePage(userAccess.readUser(facebookUserID), profilePage))
             cursor.close()
             db.closeConnection()
 
