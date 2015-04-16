@@ -11,12 +11,12 @@ __author__ = 'David'
 class FacebookUserDB:
 
     def __init__(self):
+        self.db = DBConnection()
         print('Create object to access table user in DB.')
 
     def insertUser(self, user: FacebookUser):
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             addFBUserQuery = 'INSERT INTO user(idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username)' \
                              'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s);'
@@ -25,7 +25,7 @@ class FacebookUserDB:
             cursor.execute(addFBUserQuery, dataUser)
             cnx.commit()
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as err:
             print(err)
@@ -37,8 +37,7 @@ class FacebookUserDB:
         user = FacebookUser({})
         mp = {}
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBUserQuery = ("SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username "
                                "FROM user WHERE facebookUserID = %s;")
@@ -59,7 +58,7 @@ class FacebookUserDB:
                 user = (FacebookUser(mp))
 
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)
@@ -70,8 +69,7 @@ class FacebookUserDB:
         users = []
         mp = {}
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBUserQuery = 'SELECT idUser, facebookUserID, firstName, gender, lastName, link, locale, name, username ' \
                               'FROM user;'
@@ -90,7 +88,7 @@ class FacebookUserDB:
                 users.append(FacebookUser(mp))
 
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex.fp.read())

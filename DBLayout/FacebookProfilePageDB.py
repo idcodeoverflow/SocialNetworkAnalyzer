@@ -12,19 +12,22 @@ class FacebookProfilePageDB:
 
     profilesPages = []
 
+    def __init__(self):
+        self.db = DBConnection()
+        self.profilesPages.clear()
+
     def insertProfilePage(self, page: FacebookProfilePage):
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             addFBUserQuery = 'INSERT INTO profilePage(idprofilePage, profilePage, facebookUserID, visitedOn)' \
-                             'VALUES (NULL, %s, %s, NOW());'
+                             ' VALUES (NULL, %s, %s, NOW());'
             dataUser = (page.profilePage, page.facebookUserId)
 
             cursor.execute(addFBUserQuery, dataUser)
             cnx.commit()
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as err:
             print(err)
@@ -34,8 +37,7 @@ class FacebookProfilePageDB:
 
     def readProfilesPagesFromUser(self, user: FacebookUser):
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBUserQuery = 'SELECT idProfilePage, profilePage, facebookUserID, visitedOn FROM profilePage WHERE facebookUserID = %s'
 
@@ -46,7 +48,7 @@ class FacebookProfilePageDB:
             for (idProfilePage, profilePage, facebookUserID, visitedOn) in cursor:
                 self.profilesPages.append(FacebookProfilePage(user, profilePage))
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)
@@ -55,19 +57,17 @@ class FacebookProfilePageDB:
 
     def readProfilesPages(self):
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             userAccess = FacebookUserDB()
             readFBUserQuery = 'SELECT idProfilePage, profilePage, facebookUserID, visitedOn FROM profilePage'
-
 
             cursor.execute(readFBUserQuery)
 
             for (idProfilePage, profilePage, facebookUserID, visitedOn) in cursor:
                 self.profilesPages.append(FacebookProfilePage(userAccess.readUser(facebookUserID), profilePage))
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)

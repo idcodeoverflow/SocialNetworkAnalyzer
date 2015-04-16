@@ -28,7 +28,6 @@ from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
 accessProfilePage = FacebookProfilePageDB()
 profilePages = accessProfilePage.readProfilesPages()
 
-
 #for profilePage in profilePages:
 #    htmlTreament = HTMLTreatment(profilePage)
 #    fbids = htmlTreament.getFBIds()

@@ -31,5 +31,6 @@ class DBConnection:
         self.cnx = mysql.connector.connect(user=self.user, password=self.password,
                                            host=self.host,
                                            database=self.database)
+
         return self.cnx
 

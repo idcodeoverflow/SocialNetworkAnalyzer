@@ -6,12 +6,12 @@ __author__ = 'David'
 
 class FacebookPostControlDB:
     def __init__(self):
+        self.db = DBConnection()
         print('Create object to access table user in DB.')
 
     def insertPostControl(self, post: FacebookPostControl):
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             addFBPostControlQuery = 'INSERT INTO postControl(idpostControl, fbid, facebookUserID, visited)' \
                                     'VALUES (NULL, %s, %s, %s);'
@@ -20,7 +20,7 @@ class FacebookPostControlDB:
             cursor.execute(addFBPostControlQuery, data)
             cnx.commit()
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as err:
             print(err)
@@ -31,8 +31,7 @@ class FacebookPostControlDB:
     def readPostControl(self, id: int):
         postControl = FacebookPostControl({})
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBPostControlQuery = ("SELECT idpostControl, fbid, facebookUserID, visited "
                                       "FROM postControl WHERE fbid = %s;")
@@ -45,7 +44,7 @@ class FacebookPostControlDB:
                 postControl = (FacebookPostControl(idpostControl, fbid, facebookUserID, visited))
 
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)
@@ -55,8 +54,7 @@ class FacebookPostControlDB:
     def readNotVisitedPostsControl(self):
         postsControl = []
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBPostControlQuery = ("SELECT idpostControl, fbid, facebookUserID, visited "
                                       "FROM postControl WHERE visited = %s")
@@ -69,7 +67,7 @@ class FacebookPostControlDB:
                 postsControl.append(FacebookPostControl(idpostControl, fbid, facebookUserID, visited))
 
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)
@@ -79,8 +77,7 @@ class FacebookPostControlDB:
     def readPostsControl(self):
         postsControl = []
         try:
-            db = DBConnection()
-            cnx = db.openConnection()
+            cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBPostControlQuery = ("SELECT idpostControl, fbid, facebookUserID, visited "
                                       "FROM postControl")
@@ -91,7 +88,7 @@ class FacebookPostControlDB:
                 postsControl.append(FacebookPostControl(idpostControl, fbid, facebookUserID, visited))
 
             cursor.close()
-            db.closeConnection()
+            self.db.closeConnection()
 
         except mysql.connector.Error as ex:
             print(ex)

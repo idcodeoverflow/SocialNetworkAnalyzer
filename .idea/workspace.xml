@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DB Model/DB Model.mwb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DB Model/DB model.mwb.bak" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EntitiesLayout/FacebookPostControl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model\modelo BD.mwb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model\modelo BD.mwb.bak" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/DBConnection.py" afterPath="$PROJECT_DIR$/DBLayout/DBConnection.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prueba.py" afterPath="$PROJECT_DIR$/Prueba.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,70 +49,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
+      <file leaf-file-name="FacebookUserDB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookUserDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1522" max-vertical-offset="3077">
-              <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookUser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookUser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="765">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Prueba.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prueba.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="697">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
               <folding>
-                <element signature="e#0#64#0" expanded="true" />
+                <marker date="1429208443874" expanded="true" signature="446:624" placeholder="INSERT INTO ..." />
+                <marker date="1429208443874" expanded="true" signature="1331:1487" placeholder="SELECT idUse..user..." />
+                <marker date="1429208443874" expanded="true" signature="2445:2578" placeholder="SELECT idUse..user..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookProfilePageDB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
+      <file leaf-file-name="FacebookCommentDB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookCommentDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1275">
-              <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <marker date="1427920931101" expanded="true" signature="517:657" placeholder="INSERT INTO ..." />
-                <marker date="1427920931101" expanded="true" signature="1297:1398" placeholder="SELECT idPro..profilePage..." />
-                <marker date="1427920931101" expanded="true" signature="2120:2185" placeholder="SELECT idPro..." />
-                <marker date="1427920931101" expanded="true" signature="2120:2186" placeholder="SELECT idPro..profilePage..." />
-                <marker date="1427920931101" expanded="true" signature="2120:2197" placeholder="SELECT idPro..profilePage..." />
+                <marker date="1429208789019" expanded="true" signature="95:191" placeholder="..." />
+                <marker date="1429208789019" expanded="true" signature="135:191" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookProfilePage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookProfilePage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTMLTreatment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1955">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,31 +79,37 @@
       <file leaf-file-name="FacebookPostControlDB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1313" max-vertical-offset="1768">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1700">
+              <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
               <folding>
-                <element signature="e#0#53#0" expanded="true" />
-                <marker date="1427915004698" expanded="true" signature="472:607" placeholder="INSERT INTO ..." />
-                <marker date="1427915004698" expanded="true" signature="1299:1422" placeholder="SELECT idpos..postControl..." />
-                <marker date="1427915004698" expanded="true" signature="2135:2251" placeholder="SELECT idpos..postControl..." />
-                <marker date="1427915004698" expanded="true" signature="2135:2260" placeholder="SELECT idpos..postControl..." />
-                <marker date="1427915004698" expanded="true" signature="2135:2261" placeholder="SELECT idpos..postControl..." />
-                <marker date="1427915004698" expanded="true" signature="2983:3092" placeholder="SELECT idpos..postControl..." />
+                <marker date="1429208963834" expanded="true" signature="478:613" placeholder="INSERT INTO ..." />
+                <marker date="1429208963834" expanded="true" signature="1283:1406" placeholder="SELECT idpos..postControl..." />
+                <marker date="1429208963834" expanded="true" signature="2097:2223" placeholder="SELECT idpos..postControl..." />
+                <marker date="1429208963834" expanded="true" signature="2923:3032" placeholder="SELECT idpos..postControl..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookUserDB.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookUserDB.py">
+      <file leaf-file-name="FacebookPostDB.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1751">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="585">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookProfilePageDB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <marker date="1425063014022" expanded="true" signature="440:618" placeholder="INSERT INTO ..." />
-                <marker date="1425063014022" expanded="true" signature="1347:1503" placeholder="SELECT idUse..user..." />
-                <marker date="1425063014022" expanded="true" signature="2483:2616" placeholder="SELECT idUse..user..." />
+                <marker date="1429209068757" expanded="true" signature="583:724" placeholder="INSERT INTO ..." />
+                <marker date="1429209068757" expanded="true" signature="1342:1443" placeholder="SELECT idPro..profilePage..." />
+                <marker date="1429209068757" expanded="true" signature="2143:2220" placeholder="SELECT idPro..profilePage..." />
               </folding>
             </state>
           </provider>
@@ -167,26 +131,26 @@
         <option value="$PROJECT_DIR$/BDLayout/FacebookCommentDB.py" />
         <option value="$PROJECT_DIR$/BDLayout/FacebookPostDB.py" />
         <option value="$PROJECT_DIR$/BDLayout/FacebookUserDB.py" />
-        <option value="$PROJECT_DIR$/DBLayout/DBConnection.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookProfile.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookUser.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookProfilePage.py" />
         <option value="C:/Python34/Lib/site-packages/mechanize/__init__.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" />
         <option value="$PROJECT_DIR$/FacebookAPI.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookComment.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookPost.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookPostControl.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" />
         <option value="$PROJECT_DIR$/Prueba.py" />
+        <option value="$PROJECT_DIR$/DBLayout/DBConnection.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py" />
       </list>
     </option>
   </component>
@@ -724,10 +688,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17170954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -742,7 +706,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3425775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34201956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -760,16 +724,16 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.57748777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34201956" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17170954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3980424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -836,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1292">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1292">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1292">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1292">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="884">
           <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,27 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookCommentDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/DBConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="680">
-          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
@@ -1109,7 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1522" max-vertical-offset="3077">
           <caret line="131" column="19" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,23 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1160" max-vertical-offset="1768">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-            <marker date="1427915004698" expanded="true" signature="472:607" placeholder="INSERT INTO ..." />
-            <marker date="1427915004698" expanded="true" signature="1299:1422" placeholder="SELECT idpos..postControl..." />
-            <marker date="1427915004698" expanded="true" signature="2135:2251" placeholder="SELECT idpos..postControl..." />
-            <marker date="1427915004698" expanded="true" signature="2135:2260" placeholder="SELECT idpos..postControl..." />
-            <marker date="1427915004698" expanded="true" signature="2135:2261" placeholder="SELECT idpos..postControl..." />
-            <marker date="1427915004698" expanded="true" signature="2983:3092" placeholder="SELECT idpos..postControl..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,44 +1073,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="697">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.42832765" vertical-offset="72" max-vertical-offset="680">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBLayout/DBConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookUserDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <marker date="1429208443874" expanded="true" signature="446:624" placeholder="INSERT INTO ..." />
+            <marker date="1429208443874" expanded="true" signature="1331:1487" placeholder="SELECT idUse..user..." />
+            <marker date="1429208443874" expanded="true" signature="2445:2578" placeholder="SELECT idUse..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookCommentDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <marker date="1429208789019" expanded="true" signature="95:191" placeholder="..." />
+            <marker date="1429208789019" expanded="true" signature="135:191" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1700">
+          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+          <folding>
+            <marker date="1429208963834" expanded="true" signature="478:613" placeholder="INSERT INTO ..." />
+            <marker date="1429208963834" expanded="true" signature="1283:1406" placeholder="SELECT idpos..postControl..." />
+            <marker date="1429208963834" expanded="true" signature="2097:2223" placeholder="SELECT idpos..postControl..." />
+            <marker date="1429208963834" expanded="true" signature="2923:3032" placeholder="SELECT idpos..postControl..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1275">
-          <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <marker date="1427920931101" expanded="true" signature="517:657" placeholder="INSERT INTO ..." />
-            <marker date="1427920931101" expanded="true" signature="1297:1398" placeholder="SELECT idPro..profilePage..." />
-            <marker date="1427920931101" expanded="true" signature="2120:2185" placeholder="SELECT idPro..." />
-            <marker date="1427920931101" expanded="true" signature="2120:2186" placeholder="SELECT idPro..profilePage..." />
-            <marker date="1427920931101" expanded="true" signature="2120:2197" placeholder="SELECT idPro..profilePage..." />
+            <marker date="1429209068757" expanded="true" signature="583:724" placeholder="INSERT INTO ..." />
+            <marker date="1429209068757" expanded="true" signature="1342:1443" placeholder="SELECT idPro..profilePage..." />
+            <marker date="1429209068757" expanded="true" signature="2143:2220" placeholder="SELECT idPro..profilePage..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookUserDB.py">
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35664335" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1425063014022" expanded="true" signature="440:618" placeholder="INSERT INTO ..." />
-            <marker date="1425063014022" expanded="true" signature="1347:1503" placeholder="SELECT idUse..user..." />
-            <marker date="1425063014022" expanded="true" signature="2483:2616" placeholder="SELECT idUse..user..." />
-          </folding>
+        <state vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="585">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
