@@ -11,7 +11,7 @@ class FacebookPostControl:
 
     def __init__(self, id: int, fbid: int, facebookUser: FacebookUser, visited: bool):
         self.idPostControl = id
-        self.fbid = 0
-        self.facebookUser = FacebookUser(0, '', '', '', '', '', '', '')
-        self.visited = False
+        self.fbid = fbid
+        self.facebookUser = facebookUser
+        self.visited = visited
 

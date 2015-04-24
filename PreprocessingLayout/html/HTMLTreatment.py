@@ -50,6 +50,7 @@ class HTMLTreatment:
             end = self.html.find(lEnd, ini, self.html.__len__())
         return ini, end
 
+    @classmethod
     def getIniEndFromText(self, text: str, lIni: str, lEnd: str, ini: int=0, end: int=0):
         if ini != 0 or end != 0:
             ini = text.find(lIni, ini + lEnd.__len__(), text.__len__())
@@ -75,6 +76,7 @@ class HTMLTreatment:
             ini, end = self.getIniEnd('<p>', '</p>', end, self.html.__len__())
         return self.paragraphs
 
+    @classmethod
     def removeHTMLLabelsFromText(self, text: str):
         ini, end = self.getIniEndFromText(text,'<', '>')
         while ini > -1 and end > -1:
