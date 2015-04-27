@@ -36,6 +36,8 @@ class FacebookProfilePageDB:
             print('Register can\'t be stored.')
 
     def readProfilesPagesFromUser(self, user: FacebookUser):
+        print('Getting User Profile Pages.')
+
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
@@ -56,16 +58,19 @@ class FacebookProfilePageDB:
         return self.profilesPages
 
     def readProfilesPages(self):
+        print('Getting Profiles Pages.')
+
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
             userAccess = FacebookUserDB()
-            readFBUserQuery = 'SELECT idProfilePage, profilePage, facebookUserID, visitedOn FROM profilePage'
+            readFBProfilesQuery = 'SELECT idProfilePage, profilePage, facebookUserID, visitedOn FROM profilePage'
 
-            cursor.execute(readFBUserQuery)
+            cursor.execute(readFBProfilesQuery)
 
             for (idProfilePage, profilePage, facebookUserID, visitedOn) in cursor:
                 self.profilesPages.append(FacebookProfilePage(userAccess.readUser(facebookUserID), profilePage))
+
             cursor.close()
             self.db.closeConnection()
 

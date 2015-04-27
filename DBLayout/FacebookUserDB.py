@@ -34,7 +34,6 @@ class FacebookUserDB:
             print('Register can\'t be stored.')
 
     def readUser(self, id: int):
-        user = FacebookUser({})
         mp = {}
         try:
             cnx = self.db.openConnection()
@@ -55,6 +54,7 @@ class FacebookUserDB:
                 mp['locale'] = locale
                 mp['name'] = name
                 mp['username'] = username
+
                 user = (FacebookUser(mp))
 
             cursor.close()
