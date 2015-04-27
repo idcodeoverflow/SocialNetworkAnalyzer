@@ -8,7 +8,7 @@ from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
 # accessProfile = FacebookProfilePageDB()
 #
 #
-# fb = FacebookAPI(5, "", True)
+fb = FacebookAPI(5, "", True)
 # # userAccess = FacebookUserDB()
 # # for i in range(0, 450, 1):
 # #     users = fb.getUsers()
@@ -26,10 +26,17 @@ from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
 #         profilePageAccess.insertProfilePage(FacebookProfilePage(i, fb.getProfilePage(i)))
 
 accessProfilePage = FacebookProfilePageDB()
-profilePages = accessProfilePage.readProfilesPages()
-
+#profilePages = accessProfilePage.readProfilesPages()
+profilePage = accessProfilePage.readProfilesPagesFromUser(FacebookUserDB().readUser(4))[0]
 #for profilePage in profilePages:
+#    print(profilePage.profilePage)
 #    htmlTreament = HTMLTreatment(profilePage)
-#    fbids = htmlTreament.getFBIds()
-#    for fbid in fbids:
-#        print(fbid)
+    #fbids = htmlTreament.getFBIds()
+    #for fbid in fbids:
+    #    print(fbid)
+#print(profilePage.profilePage)
+htmlTreament = HTMLTreatment(profilePage.profilePage)
+fbids = htmlTreament.getFBIds()
+for fbid in fbids:
+        print(fbid)
+print(htmlTreament.html)

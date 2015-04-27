@@ -8,8 +8,8 @@ class HTMLTreatment:
     comments = []
     paragraphs = []
 
-    def __init__(self, html: str):
-        self.html = html
+    def __init__(self, htmlText: str):
+        self.html = htmlText
 
     def replaceHexCharacters(self):
         chars = HexCharacterMapping()

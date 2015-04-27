@@ -124,7 +124,7 @@ class FacebookAPI:
         usock = self.opener.open(url, data=auth)
         html = usock.read().decode('utf-8')
         if "Logout" in html:
-            print("Logged in.")
+            print("*-*-*-*-*-*-*-*-*-*-*-* Successfully logged in!!! *-*-*-*-*-*-*-*-*-*-*-*")
             self.auth = auth
         else:
             print

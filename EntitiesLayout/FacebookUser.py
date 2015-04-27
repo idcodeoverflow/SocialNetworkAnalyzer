@@ -21,9 +21,6 @@ class FacebookUser:
 
     def __init__(self, mp):
         try:
-            if len(mp) < 1:
-                raise KeyError('The dictionary containing the user data is empty.')
-            print('usuario -> ' + str(mp))
             self.facebookUserId = mp['id']
             self.firstName = mp['first_name']
             self.gender = mp['gender']
@@ -34,7 +31,7 @@ class FacebookUser:
             self.userName = mp['username']
 
         except KeyError:
-            print('This register won\'t be stored.')
+            print('This User register won\'t be stored.' + str(mp))
 
     
     def __repr__(self):
