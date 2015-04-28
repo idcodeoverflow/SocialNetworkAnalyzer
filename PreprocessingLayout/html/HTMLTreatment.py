@@ -86,7 +86,20 @@ class HTMLTreatment:
         return text
 
     def countLikes(self):
-        likesCount = self.html.count('Agregar a mis amigos')
+        try:
+            sentence = 'likecountreduced'
+            hexChar = '\\u00a0'
+            ini = self.html.find(sentence) + 19
+            end = ini
+            if ini == -1:
+                return 0
+            while end < self.html.__len__() and self.html[end] != '"':
+                end += 1
+            number = self.html[ini : end]
+            number = number.replace(hexChar,'')
+            likesCount = int(number)
+        except ValueError:
+            return 0
         return likesCount
 
     def getFacebookComments(self):
