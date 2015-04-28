@@ -376,6 +376,7 @@ class HexCharacterMapping:
         self.characters['&yuml;'] = 'ÿ'
         self.characters['&euro;'] = '€'
 
+        self.characters['&#x2019;;'] = '\''
         self.characters['&#8242;'] = '′'
         self.characters['&#8243;'] = '″'
         self.characters['&#8249;'] = '‹'
