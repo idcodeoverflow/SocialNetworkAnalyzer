@@ -17,9 +17,9 @@ fb = FacebookAPI(5, "", True)
 #
 # u = accessUser.readUsers()
 # profilePageAccess = FacebookProfilePageDB()
-# mail = input('Type your email:')
-# password = input('Type your password:')
-# fb.login(mail, password)
+mail = 'respaldos.remex2013@gmail.com'#input('Type your email:')
+password = 'remex2013'#input('Type your password:')
+fb.login(mail, password)
 # for i in u:
 #     if i.facebookUserId > 6942:
 #         print(i)
@@ -27,7 +27,8 @@ fb = FacebookAPI(5, "", True)
 
 accessProfilePage = FacebookProfilePageDB()
 #profilePages = accessProfilePage.readProfilesPages()
-profilePage = accessProfilePage.readProfilesPagesFromUser(FacebookUserDB().readUser(4))[0]
+user = FacebookUserDB().readUser(4)
+profilePage = accessProfilePage.readProfilesPagesFromUser(user)[0]
 #for profilePage in profilePages:
 #    print(profilePage.profilePage)
 #    htmlTreament = HTMLTreatment(profilePage)
@@ -37,6 +38,12 @@ profilePage = accessProfilePage.readProfilesPagesFromUser(FacebookUserDB().readU
 #print(profilePage.profilePage)
 htmlTreament = HTMLTreatment(profilePage.profilePage)
 fbids = htmlTreament.getFBIds()
+print(fbids)
 for fbid in fbids:
-        print(fbid)
-print(htmlTreament.html)
+    print(fbid)
+    text = fb.getPostPage(user,fbid)
+    tr = HTMLTreatment(text)
+    print(text)
+    print('--------------------->Likes count: ' + str(tr.countLikes()))
+
+#print(htmlTreament.html)
