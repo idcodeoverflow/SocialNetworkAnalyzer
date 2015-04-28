@@ -131,13 +131,15 @@ class FacebookAPI:
             "failed login"
         print(html)
 
-    def getLikesPage(self, userId: int, postId: str):
+    def getLikesPage(self, user: FacebookUser, postId: str):
+        self.existsPostCount = False
+        profilePage = ''
         try:
-            link = self.fbURL + '/browse/likes?id=' + postId + '&actorid=' + str(userId)
+            link = self.fbURL + '/browse/likes?id=' + postId + '&actorid=' + str(user.facebookUserId)
             packetData = self.opener.open(link)
             profilePage = packetData.read().decode('utf-8')
             packetData.close()
-            if(profilePage.contains('No se han encontrado resultados.')):
+            if('No se han encontrado resultados.' in profilePage):
                 return ''
         except urllib.error.HTTPError as e:
             self.existsPostCount = True
@@ -149,17 +151,19 @@ class FacebookAPI:
 
         else:
             if self.printable:
-                print('Like\'s count Page % not found' % (link))
+                print("Like's count Page not found" )
 
         return profilePage
 
     def getPostPage(self, user: FacebookUser, postId: int):
+        self.existsPostCount = False
+        profilePage = ''
         try:
             link = user.link + '/posts/' + str(postId)
             packetData = self.opener.open(link)
             profilePage = packetData.read().decode('utf-8')
             packetData.close()
-            if(profilePage.contains('No se han encontrado resultados.')):
+            if('Esta página no está disponible' in profilePage):
                 return ''
         except urllib.error.HTTPError as e:
             self.existsPostCount = True
@@ -171,7 +175,7 @@ class FacebookAPI:
 
         else:
             if self.printable:
-                print('Like\'s count Page % not found' % (link))
+                print('Post\'s Page % not found' % (link))
 
         return profilePage
 
