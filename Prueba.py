@@ -38,12 +38,17 @@ profilePage = accessProfilePage.readProfilesPagesFromUser(user)[0]
 #print(profilePage.profilePage)
 htmlTreament = HTMLTreatment(profilePage.profilePage)
 fbids = htmlTreament.getFBIds()
-print(fbids)
+#print(fbids)
 for fbid in fbids:
     print(fbid)
     text = fb.getPostPage(user,fbid)
     tr = HTMLTreatment(text)
-    print(text)
-    print('--------------------->Likes count: ' + str(tr.countLikes()))
+    print('*************************************************')
+    tr.getFacebookComments()
+    #print(text)
+    #print('--------------------->Likes count: ' + str(tr.countLikes()))
+
+
+
 
 #print(htmlTreament.html)

@@ -5,30 +5,35 @@ __author__ = 'David'
 
 class FacebookComment:
 
-    def __init__(self):
-        self.facebookCommentId = 0
-        self.id = 0
-        self.fbid = 0
-        self.legacyId = 0
-        self.body = CommentBody('', [], [])
-        self.author = 0
-        self.ftIdentifier = 0
-        self.isFeatured = False
-        self.likeCount = 0
-        self.hasViewerLiked = False
-        self.canRemove = False
-        self.canReport = False
-        self.canEdit = False
-        self.source = ""
-        self.viewerCanLike = False
-        self.canCommnet = False
-        self.isAuthorWeakReference = False
-        self.isTranslatable = False
-        self.timestamp = Timestamp(0, '', '')
-        self.interestingReplyOffset = 0
-        self.interestingReplyId = 0
-        self.recentReplyTimestamp = Timestamp(0, '', '')
-        self.spamReplyCount = Timestamp(0, '', '')
+    def __init__(self, facebookCommentId: int = 0, id: int = 0, fbid: int = 0, legacyId : int = 0, body : CommentBody = CommentBody('', [], []),
+                 author: int = 0, ftIdentifier: int = 0, isFeatured: bool = False, likeCount: int = 0, hasViewerLiked: bool = False,
+                 canRemove: bool = False, canReport: bool = False, canEdit: bool = False, source: str = '', viewerCanLike: bool = False,
+                 canComment: bool = False, isAuthorWeakReference: bool = False, isTranslatable: bool = False,
+                 timestamp: Timestamp = Timestamp(0,'',''), interestingReplyOffset: int = 0, interestingReplyId: int = 0,
+                 recentReplyTimestamp: Timestamp = Timestamp(0,'',''), spamReplyCount: int = 0):
+        self.facebookCommentId = facebookCommentId
+        self.id = id
+        self.fbid = fbid
+        self.legacyId = legacyId
+        self.body = body
+        self.author = author
+        self.ftIdentifier = ftIdentifier
+        self.isFeatured = isFeatured
+        self.likeCount = likeCount
+        self.hasViewerLiked = hasViewerLiked
+        self.canRemove = canRemove
+        self.canReport = canReport
+        self.canEdit = canEdit
+        self.source = source
+        self.viewerCanLike = viewerCanLike
+        self.canComment = canComment
+        self.isAuthorWeakReference = isAuthorWeakReference
+        self.isTranslatable = isTranslatable
+        self.timestamp = timestamp
+        self.interestingReplyOffset = interestingReplyOffset
+        self.interestingReplyId = interestingReplyId
+        self.recentReplyTimestamp = recentReplyTimestamp
+        self.spamReplyCount = spamReplyCount
 
 
 
