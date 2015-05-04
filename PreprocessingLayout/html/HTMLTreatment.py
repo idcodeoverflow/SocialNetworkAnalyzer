@@ -1,3 +1,4 @@
+import json
 from PreprocessingLayout.html.HexCharacterMapping import HexCharacterMapping
 
 __author__ = 'David'
@@ -60,7 +61,7 @@ class HTMLTreatment:
             end = text.find(lEnd, ini, text.__len__())
         return ini, end
 
-    def extractComments(self):
+    def extractHTMLComments(self):
         ini, end = self.getIniEnd('<!--', '-->')
         self.comments = []
         while ini > -1:
@@ -103,13 +104,53 @@ class HTMLTreatment:
         return likesCount
 
     def getFacebookComments(self):
-        comms = []
+        comms = {}
+        strs = []
+        data = {}
         text = ''
         self.replaceHexCharacters()
-        ini, end = self.getIniEnd("""<script>bigPipe.beforePageletArrive("stream_pagelet")</script>
-<script>require("TimeSlice").guard(function() {bigPipe.onPageletArrive(""", '"onPageletArrive stream_pagelet")()')
+        ini, end = self.getIniEnd('{\"content\":{\"stream_pagelet\"', ');}, "onPageletArrive stream_pagelet")()')
         if ini > -1:
-            comms.append(self.html[ini : end])
+            text = self.html[ini : end]
+            ini, end = self.getIniEndFromText(text, '"comments"', ']')
+            text = text[ini : ]
+            print(text)
+            count = 1
+            index = 12
+            #get comments JSON string
+            while index < text.__len__() and count != 0:
+                if text[index] == '[' :
+                    count += 1
+                elif text[index] == ']':
+                    count -= 1
+                index += 1
+
+            if count != 0: #if there isn't a valid string return an empty dictionary
+                return {}
+            text = '{' + text[ : index] + '}'
+
+            index = 14
+
+            while index < text.__len__():
+                ini = index
+                count = 1
+                while index < text.__len__() and count != 0:
+                    if text[index] == '{':
+                        count += 1
+                        if count == 1:
+                            ini = index
+                    elif text[index] == '}':
+                        count -= 1
+                    index += 1
+                print(text[ini - 1 : index])
+                strs.append(text[ini - 1 : index])
+                index += 2
+
+            data = json.loads(text)
+
+            #temp show results
+            for key in data.keys():
+                print(key + ' : ' + str(data[key]))
         return comms
 
     def getFBIds(self):
