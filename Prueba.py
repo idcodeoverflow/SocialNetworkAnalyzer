@@ -4,8 +4,8 @@ from EntitiesLayout.FacebookProfilePage import FacebookProfilePage
 from FacebookAPI import FacebookAPI
 from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
 
-# accessUser = FacebookUserDB()
-# accessProfile = FacebookProfilePageDB()
+accessUser = FacebookUserDB()
+accessProfile = FacebookProfilePageDB()
 #
 #
 fb = FacebookAPI(5, "", True)
@@ -15,29 +15,31 @@ fb = FacebookAPI(5, "", True)
 # #     for u in users:
 # #         userAccess.insertUser(FacebookUser(u))
 #
-# u = accessUser.readUsers()
-# profilePageAccess = FacebookProfilePageDB()
+u = accessUser.readUsers()
+profilePageAccess = FacebookProfilePageDB()
 mail = 'respaldos.remex2013@gmail.com'#input('Type your email:')
 password = 'remex2013'#input('Type your password:')
 fb.login(mail, password)
-# for i in u:
-#     if i.facebookUserId > 6942:
-#         print(i)
-#         profilePageAccess.insertProfilePage(FacebookProfilePage(i, fb.getProfilePage(i)))
+#for i in u:
+#    if i.facebookUserId > 1468:
+#        print(i)
+#        profilePageAccess.insertProfilePage(FacebookProfilePage(i, fb.getProfilePage(i)))
 
 accessProfilePage = FacebookProfilePageDB()
-#profilePages = accessProfilePage.readProfilesPages()
+profilePages = accessProfilePage.readProfilesPages()
 user = FacebookUserDB().readUser(4)
 profilePage = accessProfilePage.readProfilesPagesFromUser(user)[0]
 #for profilePage in profilePages:
 #    print(profilePage.profilePage)
-#    htmlTreament = HTMLTreatment(profilePage)
+    #htmlTreament = HTMLTreatment(profilePage)
     #fbids = htmlTreament.getFBIds()
     #for fbid in fbids:
-    #    print(fbid)
+        #print(fbid)
 #print(profilePage.profilePage)
 htmlTreament = HTMLTreatment(profilePage.profilePage)
 fbids = htmlTreament.getFBIds()
+print('8888888888888888888888888888888888888888888888888888888888888888888888888888888')
+print(profilePage.profilePage)
 #print(fbids)
 for fbid in fbids:
     print(fbid)

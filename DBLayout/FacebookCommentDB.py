@@ -15,18 +15,18 @@ class FacebookCommentDB:
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
-            addFBUserQuery = 'INSERT INTO comment(idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
+            addFBCommentQuery = 'INSERT INTO comment(idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
                              'canRemove, canReport, canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, ' \
                              'timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId, ' \
                              'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)' \
-                             'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s);'
+                             'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);'
             dataUser = (comment.idComment, comment.id, comment.fbid, comment.legacyid, comment.text, comment.author, comment.ftidentifier, comment.isFeatured,
                         comment.likeCount, comment.hasViewerLiked, comment.canRemove, comment.canReport, comment.canEdit, comment.source, comment.viewerCanLike,
                         comment.canComment, comment.isAuthorWeakReference, comment.isTranslatable, comment.timestamp_time, comment.timestamp_text, comment.timestamp_verbose,
                         comment.spamReplyCount, comment.interestingReplyOffset, comment.interestingReplyId, comment.recentReplyTimestamp_time, comment.recentReplyTimestamp_text,
                         comment.recentReplyTimestamp_verbose)
 
-            cursor.execute(addFBUserQuery, dataUser)
+            cursor.execute(addFBCommentQuery, dataUser)
             cnx.commit()
             cursor.close()
             self.db.closeConnection()

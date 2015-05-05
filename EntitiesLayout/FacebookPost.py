@@ -10,17 +10,14 @@ class FacebookPost:
     text = ''
     facebookUserID = 0
     likeCount = 0
-    shareCount = 0
-    commentCount = 0
 
-    def __init__(self, mapa, userId: int, text: str):
+
+    def __init__(self, mapa: {}):
         try:
             self.facebookPostId = mapa['targetfbid']
-            self.createdTime = mapa['']
-            self.text = text
-            self.facebookUserID = userId
+            self.createdTime = mapa['createdTime']
+            self.text = mapa['text']
+            self.facebookUserID = mapa['userId']
             self.likeCount = mapa['likecount']
-            self.shareCount = mapa['sharecount']
-            self.commentCount = mapa['commentcount']
         except KeyError:
-            print('A key is missing, register will be discarded.')
+            print('A key is missing, post register will be discarded.')

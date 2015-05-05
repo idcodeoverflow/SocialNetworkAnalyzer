@@ -89,7 +89,7 @@ class FacebookAPI:
         return result
 
     def getProfilePage(self, fbUser: FacebookUser):
-
+        profilePage = ''
         try:
             packetData = self.opener.open(fbUser.link)
             profilePage = packetData.read().decode('utf-8')
@@ -110,6 +110,7 @@ class FacebookAPI:
             if self.printable:
                 print('Profile Page of User ID: %s not found' % (str(fbUser.facebookUserId) + ' ' + fbUser.name))
 
+        self.existsProfile = False
         return profilePage
 
     def login(self, user: str, password: str):
