@@ -129,6 +129,7 @@ class HTMLTreatment:
                 return {}
             text = '{' + text[ : index] + '}'
 
+
             index = 14
 
             while index < text.__len__():
@@ -147,6 +148,7 @@ class HTMLTreatment:
                 index += 2
 
             data = json.loads(text)
+            self.comments = strs
 
             #temp show results
             for key in data.keys():
@@ -163,3 +165,14 @@ class HTMLTreatment:
             lis[self.html[ini + 6: end]] = '1'
             ini, end = self.getIniEnd('?fbid=', '&', end, self.html.__len__())
         return lis.keys()
+
+    def commentsJSONToDictionary(self):
+        commentsObjects = []
+        if self.comments.__len__() < 1:
+            print("No comments to extract.")
+            return {}
+        dic = json.loads(self.comments[0])
+        print('--------------------->' + str(dic))
+        return dic
+
+

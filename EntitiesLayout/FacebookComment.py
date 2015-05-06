@@ -1,4 +1,4 @@
-
+import json
 
 __author__ = 'David'
 
@@ -35,6 +35,42 @@ class FacebookComment:
         self.recentReplyTimestamp = recentReplyTimestamp
         self.spamReplyCount = spamReplyCount
 
+    def __init__(self, mp: {}):
+        time = 0
+        text = ''
+        verbose = ''
+        comment = FacebookComment()
+        comment.id = mp['id']
+        comment.fbid = mp['fbid']
+        comment.legacyId = mp['legacyid']
+        comment.body = mp['body']
+        comment.author = mp['author']
+        comment.ftIdentifier = mp['ftentidentifier']
+        comment.isFeatured = mp['isfeatured']
+        comment.likeCount = mp['likecount']
+        comment.hasViewerLiked = mp['hasviewerliked']
+        comment.canRemove = mp['canremove']
+        comment.canReport = mp['canreport']
+        comment.canEdit = mp['canedit']
+        comment.source = mp['source']
+        comment.viewerCanLike = mp['viewercanlike']
+        comment.canComment = mp['cancomment']
+        comment.isAuthorWeakReference = mp['isauthorweakreference']
+        comment.isTranslatable = mp['istranslatable']
+        time = mp['timestamp']
+        timestampData = json.loads(time)
+        if 'time' in timestampData.keys():
+            time = timestampData['time']
+        if 'text' in timestampData.keys():
+            text = timestampData['text']
+        if 'verbose' in timestampData.keys():
+            verbose = timestampData['verbose']
+        comment.timestamp = Timestamp(time, text, verbose)
+        comment.interestingReplyOffset = mp['']
+        comment.interestingReplyId = mp['']
+        comment.recentReplyTimestamp = mp['']
+        comment.spamReplyCount = mp['']
+
 
 
 class CommentBody:
@@ -47,6 +83,10 @@ class CommentBody:
         self.text = text
         self.ranges = ranges
         self.aggregatedRanges = agregatedRanges
+
+    @classmethod
+    def init(self, map):
+        return CommentBody()
 
 class Timestamp:
 
