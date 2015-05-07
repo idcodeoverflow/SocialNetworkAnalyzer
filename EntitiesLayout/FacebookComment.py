@@ -44,46 +44,78 @@ class FacebookComment:
         aggregatedRanges = []
         comment = FacebookComment()
         try:
-            comment.id = mp['id']
-            comment.fbid = mp['fbid']
-            comment.legacyId = mp['legacyid']
+            if 'id' in mp.keys():
+                comment.id = mp['id']
+            if 'fbid' in mp.keys():
+                comment.fbid = mp['fbid']
+            if 'legacyid' in mp.keys():
+                comment.legacyId = mp['legacyid']
 
-            bodyData = json.loads(mp['body'])
-            if 'text' in bodyData.keys():
-                ttext = bodyData['text']
-            if 'ranges' in bodyData.keys():
-                ranges = bodyData['ranges']
-            if 'aggregatedranges' in bodyData.keys():
-                aggregatedRanges = bodyData['aggregatedranges']
-            comment.body = CommentBody(ttext, ranges, aggregatedRanges)
+            if 'body' in mp.keys():
+                bodyData = json.loads(mp['body'])
+                if 'text' in bodyData.keys():
+                    ttext = bodyData['text']
+                if 'ranges' in bodyData.keys():
+                    ranges = bodyData['ranges']
+                if 'aggregatedranges' in bodyData.keys():
+                    aggregatedRanges = bodyData['aggregatedranges']
+                comment.body = CommentBody(ttext, ranges, aggregatedRanges)
 
-            comment.author = mp['author']
-            comment.ftIdentifier = mp['ftentidentifier']
-            comment.isFeatured = mp['isfeatured']
-            comment.likeCount = mp['likecount']
-            comment.hasViewerLiked = mp['hasviewerliked']
-            comment.canRemove = mp['canremove']
-            comment.canReport = mp['canreport']
-            comment.canEdit = mp['canedit']
-            comment.source = mp['source']
-            comment.viewerCanLike = mp['viewercanlike']
-            comment.canComment = mp['cancomment']
-            comment.isAuthorWeakReference = mp['isauthorweakreference']
-            comment.isTranslatable = mp['istranslatable']
+            if 'author' in mp.keys():
+                comment.author = mp['author']
+            if 'ftentidentifier' in mp.keys():
+                comment.ftIdentifier = mp['ftentidentifier']
+            if 'isfeatured' in mp.keys():
+                comment.isFeatured = mp['isfeatured']
+            if 'likecount' in mp.keys():
+                comment.likeCount = mp['likecount']
+            if 'hasviewerliked' in mp.keys():
+                comment.hasViewerLiked = mp['hasviewerliked']
+            if 'canremove' in mp.keys():
+                comment.canRemove = mp['canremove']
+            if 'canreport' in mp.keys():
+                comment.canReport = mp['canreport']
+            if 'canedit' in mp.keys():
+                comment.canEdit = mp['canedit']
+            if 'source' in mp.keys():
+                comment.source = mp['source']
+            if 'viewercanlike' in mp.keys():
+                comment.viewerCanLike = mp['viewercanlike']
+            if 'cancomment' in mp.keys():
+                comment.canComment = mp['cancomment']
+            if 'isauthorweakreference' in mp.keys():
+                comment.isAuthorWeakReference = mp['isauthorweakreference']
+            if 'istranslatable' in mp.keys():
+                comment.isTranslatable = mp['istranslatable']
 
-            timestampData = json.loads(mp['timestamp'])
-            if 'time' in timestampData.keys():
-                time = timestampData['time']
-            if 'text' in timestampData.keys():
-                text = timestampData['text']
-            if 'verbose' in timestampData.keys():
-                verbose = timestampData['verbose']
-            comment.timestamp = Timestamp(time, text, verbose)
+            if 'timestamp' in mp.keys():
+                timestampData = json.loads(mp['timestamp'])
+                if 'time' in timestampData.keys():
+                    time = timestampData['time']
+                if 'text' in timestampData.keys():
+                    text = timestampData['text']
+                if 'verbose' in timestampData.keys():
+                    verbose = timestampData['verbose']
+                comment.timestamp = Timestamp(time, text, verbose)
 
-            comment.interestingReplyOffset = mp['interestingreplyoffset']
-            comment.interestingReplyId = mp['interestingreplyid']
-            comment.recentReplyTimestamp = mp['']
-            comment.spamReplyCount = mp['spamreplycount']
+            if 'interestingreplyoffset' in mp.keys():
+                comment.interestingReplyOffset = mp['interestingreplyoffset']
+            if 'interestingreplyid' in mp.keys():
+                comment.interestingReplyId = mp['interestingreplyid']
+
+            if 'recentreplytimestamp' in mp.keys():
+                timestampData = json.loads(mp['recentreplytimestamp'])
+                if 'time' in timestampData.keys():
+                    time = timestampData['time']
+                if 'text' in timestampData.keys():
+                    text = timestampData['text']
+                if 'verbose' in timestampData.keys():
+                    verbose = timestampData['verbose']
+                comment.recentReplyTimestamp = Timestamp(time, text, verbose)
+
+            if 'spamreplycount' in mp.keys():
+                comment.spamReplyCount = mp['spamreplycount']
+
         except KeyError:
             print('One attribute is missing in comment.')
         return comment
