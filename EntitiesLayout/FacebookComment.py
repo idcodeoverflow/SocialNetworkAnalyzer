@@ -39,38 +39,54 @@ class FacebookComment:
         time = 0
         text = ''
         verbose = ''
+        ttext = ''
+        ranges = []
+        aggregatedRanges = []
         comment = FacebookComment()
-        comment.id = mp['id']
-        comment.fbid = mp['fbid']
-        comment.legacyId = mp['legacyid']
-        comment.body = mp['body']
-        comment.author = mp['author']
-        comment.ftIdentifier = mp['ftentidentifier']
-        comment.isFeatured = mp['isfeatured']
-        comment.likeCount = mp['likecount']
-        comment.hasViewerLiked = mp['hasviewerliked']
-        comment.canRemove = mp['canremove']
-        comment.canReport = mp['canreport']
-        comment.canEdit = mp['canedit']
-        comment.source = mp['source']
-        comment.viewerCanLike = mp['viewercanlike']
-        comment.canComment = mp['cancomment']
-        comment.isAuthorWeakReference = mp['isauthorweakreference']
-        comment.isTranslatable = mp['istranslatable']
-        time = mp['timestamp']
-        timestampData = json.loads(time)
-        if 'time' in timestampData.keys():
-            time = timestampData['time']
-        if 'text' in timestampData.keys():
-            text = timestampData['text']
-        if 'verbose' in timestampData.keys():
-            verbose = timestampData['verbose']
-        comment.timestamp = Timestamp(time, text, verbose)
-        comment.interestingReplyOffset = mp['']
-        comment.interestingReplyId = mp['']
-        comment.recentReplyTimestamp = mp['']
-        comment.spamReplyCount = mp['']
+        try:
+            comment.id = mp['id']
+            comment.fbid = mp['fbid']
+            comment.legacyId = mp['legacyid']
 
+            bodyData = json.loads(mp['body'])
+            if 'text' in bodyData.keys():
+                ttext = bodyData['text']
+            if 'ranges' in bodyData.keys():
+                ranges = bodyData['ranges']
+            if 'aggregatedranges' in bodyData.keys():
+                aggregatedRanges = bodyData['aggregatedranges']
+            comment.body = CommentBody(ttext, ranges, aggregatedRanges)
+
+            comment.author = mp['author']
+            comment.ftIdentifier = mp['ftentidentifier']
+            comment.isFeatured = mp['isfeatured']
+            comment.likeCount = mp['likecount']
+            comment.hasViewerLiked = mp['hasviewerliked']
+            comment.canRemove = mp['canremove']
+            comment.canReport = mp['canreport']
+            comment.canEdit = mp['canedit']
+            comment.source = mp['source']
+            comment.viewerCanLike = mp['viewercanlike']
+            comment.canComment = mp['cancomment']
+            comment.isAuthorWeakReference = mp['isauthorweakreference']
+            comment.isTranslatable = mp['istranslatable']
+
+            timestampData = json.loads(mp['timestamp'])
+            if 'time' in timestampData.keys():
+                time = timestampData['time']
+            if 'text' in timestampData.keys():
+                text = timestampData['text']
+            if 'verbose' in timestampData.keys():
+                verbose = timestampData['verbose']
+            comment.timestamp = Timestamp(time, text, verbose)
+
+            comment.interestingReplyOffset = mp['interestingreplyoffset']
+            comment.interestingReplyId = mp['interestingreplyid']
+            comment.recentReplyTimestamp = mp['']
+            comment.spamReplyCount = mp['spamreplycount']
+        except KeyError:
+            print('One attribute is missing in comment.')
+        return comment
 
 
 class CommentBody:
@@ -79,10 +95,10 @@ class CommentBody:
     ranges = []
     aggregatedRanges = []
 
-    def __init__(self, text: str, ranges: [], agregatedRanges: []):
+    def __init__(self, text: str, ranges: [], aggregatedRanges: []):
         self.text = text
         self.ranges = ranges
-        self.aggregatedRanges = agregatedRanges
+        self.aggregatedRanges = aggregatedRanges
 
     @classmethod
     def init(self, map):
