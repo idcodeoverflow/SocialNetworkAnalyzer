@@ -36,22 +36,26 @@ profilePage = accessProfilePage.readProfilesPagesFromUser(user)[0]
     #for fbid in fbids:
         #print(fbid)
 #print(profilePage.profilePage)
-htmlTreament = HTMLTreatment(profilePage.profilePage)
-fbids = htmlTreament.getFBIds()
-print('8888888888888888888888888888888888888888888888888888888888888888888888888888888')
-print(profilePage.profilePage)
+#htmlTreament = HTMLTreatment(profilePage.profilePage)
+#fbids = htmlTreament.getFBIds()
+#print('8888888888888888888888888888888888888888888888888888888888888888888888888888888')
+#print(profilePage.profilePage)
 
-for fbid in fbids:
-    print(fbid)
-    text = fb.getPostPage(user,fbid)
-    tr = HTMLTreatment(text)
-    print('*************************************************')
-    tr.getFacebookComments()
-    tr.commentsJSONToDictionary()
+#for fbid in fbids:
+#    print(fbid)
+#    text = fb.getPostPage(user,fbid)
+#    tr = HTMLTreatment(text)
+#    print('*************************************************')
+#    tr.getFacebookComments()
+#    tr.commentsJSONToDictionary()
     #print(text)
     #print('--------------------->Likes count: ' + str(tr.countLikes()))
 
-
-
-
 #print(htmlTreament.html)
+
+
+fb.getPendantPosts()
+
+
+
+

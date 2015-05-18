@@ -29,7 +29,7 @@ class FacebookPostControlDB:
             print('Register can\'t be stored.')
 
     def readPostControl(self, id: int):
-        postControl = FacebookPostControl({})
+        postControl = FacebookPostControl()
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
