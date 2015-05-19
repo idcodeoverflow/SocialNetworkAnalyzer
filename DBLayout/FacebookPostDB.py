@@ -14,7 +14,12 @@ class FacebookPostDB:
             cursor = cnx.cursor()
             addFBPostQuery = 'INSERT INTO post(idPost, facebookPostId, createdTime, message, facebookUserId, likesCount)' \
                              'VALUES (NULL, %s, %s, %s, %s, %s);'
-            dataPost = (post.idPost, post.facebookPostId, post.createdTime, post.message, post.facebookUserId, post.likesCount)
+            dataPost = (post.facebookPostId, post.createdTime, post.text, post.facebookUserID, post.likeCount)
+
+
+            print('INSERT INTO post(idPost, facebookPostId, createdTime, message, facebookUserId, likesCount)' \
+                             'VALUES (NULL,' + str(post.facebookPostId) + ',' + str(post.createdTime)
+                  + ',' + str(post.text) + ',' + str(post.facebookUserID) + ',' + str(post.likeCount))
 
             cursor.execute(addFBPostQuery, dataPost)
             cnx.commit()
@@ -25,6 +30,7 @@ class FacebookPostDB:
             print(err)
             print('Error writing a Facebook post in the DB.')
         except AttributeError as err:
+            print(err)
             print('post register can\'t be stored.')
 
     def readPost(self, fbid: int):

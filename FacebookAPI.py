@@ -219,7 +219,7 @@ class FacebookAPI:
                                     text += paragraph
                                 post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
                                 postAccess.insertPost(post)
-                                fpcAccess.insertPostControl(post)
+                                #fpcAccess.insertPostControl(post)
                                 print('A post from user ' + str(facebookUserID) + ' was stored fbid: ' + str(fbid) + '\n' + text)
         except AttributeError as err:
             print('Attribute error at get pendant posts ' + err)
