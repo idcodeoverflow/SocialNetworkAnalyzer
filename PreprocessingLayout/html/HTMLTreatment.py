@@ -80,7 +80,9 @@ class HTMLTreatment:
     @classmethod
     def removeHTMLLabelsFromText(self, text: str):
         ini, end = self.getIniEndFromText(text,'<', '>')
-        while ini > -1 and end > -1:
+        while ini > -1 and end > -1 and end < text.__len__():
+            if ini - 1 < 0 or end - 1 < 0:
+                break
             text = text[:ini - 1] + ' ' + text[end + 1:]
             ini, end = self.getIniEndFromText(text,'<', '>')
 

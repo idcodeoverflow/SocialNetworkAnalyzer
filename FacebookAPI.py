@@ -8,6 +8,7 @@ import http.cookiejar
 from mysql.connector import Timestamp
 from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
+from EntitiesLayout.FacebookPostControl import FacebookPostControl
 
 from EntitiesLayout.FacebookUser import *
 from DBLayout.FacebookPostControlDB import FacebookPostControlDB
@@ -183,28 +184,35 @@ class FacebookAPI:
             tempo = 0
 
         else:
-            if self.printable:
-                print('Post\'s Page % not found' % (link))
+            try:
+                if self.printable:
+                    print('Post\'s Page % not found' % (link))
+            except ValueError as err:
+                return profilePage
 
         return profilePage
 
     def getPendantPosts(self):
         try:
-            index = self._START_NUMBER_
             ufpcAccess = FacebookProfilePageDB()
             fpcAccess = FacebookPostControlDB()
             postAccess = FacebookPostDB()
             usersAccess = FacebookUserDB()
             users = usersAccess.readUsers()
+
             for user in users:
                 print('Getting posts from user: ' + str(user.facebookUserId))
                 profiles = ufpcAccess.readProfilesPagesFromUser(user)
+
                 for profile in profiles:
                     htmlTreatment = HTMLTreatment(profile.profilePage)
                     fbids = htmlTreatment.getFBIds()
-                    #print(fbids)
+
                     for fbid in fbids:
-                        control = fpcAccess.readPostControl(int(fbid))
+                        if fbid.isdigit():
+                            control = fpcAccess.readPostControl(int(fbid))
+                        else:
+                            control = FacebookPostControl()
                         if control.fbid == 0:
                             postPage = self.getPostPage(user, fbid)
                             postTreatment = HTMLTreatment(postPage)
@@ -215,18 +223,27 @@ class FacebookAPI:
                                 text = ''
                                 facebookUserID = user.facebookUserId
                                 paragraphs = postTreatment.extractParagraphs()
+
                                 for paragraph in paragraphs:
                                     text += paragraph
-                                post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
-                                postAccess.insertPost(post)
-                                #fpcAccess.insertPostControl(post)
+
+                                textTreatment = HTMLTreatment(text)
+                                text = textTreatment.removeHTMLLabelsFromText(text)
+                                print(text)
+                                #textTreatment.removeLinks()
+                                #textTreatment.replaceHexCharacters()
+                                #text = textTreatment.html
+
+                                #post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
+                                #postAccess.insertPost(post)
+                                #fpcAccess.insertPostControl(FacebookPostControl(0, fbid, user, True))
                                 print('A post from user ' + str(facebookUserID) + ' was stored fbid: ' + str(fbid) + '\n' + text)
         except AttributeError as err:
-            print('Attribute error at get pendant posts ' + err)
-        except ValueError as err:
-            print('Value error at get pendant posts')
-        except Exception as err:
-            print('An error has occurred while getting pendant posts ' + err)
+            print('Attribute error at get pendant posts ' + str(err))
+        #except ValueError as err:
+        #    print('Value error at get pendant posts ' + str(err))
+        #except Exception as err:
+        #    print('An error has occurred while getting pendant posts ' + str(err))
 
 
     def getPendantComments(self):
