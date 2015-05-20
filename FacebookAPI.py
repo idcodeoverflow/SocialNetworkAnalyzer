@@ -229,9 +229,9 @@ class FacebookAPI:
 
                                 textTreatment = HTMLTreatment(text)
                                 text = textTreatment.removeHTMLLabelsFromText(text)
-                                print(text)
+
                                 #textTreatment.removeLinks()
-                                #textTreatment.replaceHexCharacters()
+                                textTreatment.replaceHexCharacters()
                                 #text = textTreatment.html
 
                                 #post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
