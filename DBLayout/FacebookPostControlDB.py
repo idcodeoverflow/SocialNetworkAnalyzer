@@ -13,7 +13,7 @@ class FacebookPostControlDB:
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
-            addFBPostControlQuery = 'INSERT INTO postControl(idpostControl, fbid, facebookUserID, visited)' \
+            addFBPostControlQuery = 'INSERT INTO postControl(idpostControl, fbid, facebookUserID, visited) ' \
                                     'VALUES (NULL, %s, %s, %s);'
             data = (post.fbid, post.facebookUser.facebookUserId, post.visited)
 
@@ -23,10 +23,9 @@ class FacebookPostControlDB:
             self.db.closeConnection()
 
         except mysql.connector.Error as err:
-            print(err)
-            print('Error writing a Facebook Post Control in the DB.')
+            print('Error writing a Facebook Post Control in the DB.' + str(err))
         except AttributeError as err:
-            print('Register can\'t be stored.')
+            print('Register can\'t be stored.' + str(err))
 
     def readPostControl(self, id: int):
         postControl = FacebookPostControl()

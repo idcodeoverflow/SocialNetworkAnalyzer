@@ -16,22 +16,15 @@ class FacebookPostDB:
                              'VALUES (NULL, %s, %s, %s, %s, %s);'
             dataPost = (post.facebookPostId, post.createdTime, post.text, post.facebookUserID, post.likeCount)
 
-
-            print('INSERT INTO post(idPost, facebookPostId, createdTime, message, facebookUserId, likesCount)' \
-                             'VALUES (NULL,' + str(post.facebookPostId) + ',' + str(post.createdTime)
-                  + ',' + str(post.text) + ',' + str(post.facebookUserID) + ',' + str(post.likeCount))
-
             cursor.execute(addFBPostQuery, dataPost)
             cnx.commit()
             cursor.close()
             self.db.closeConnection()
 
         except mysql.connector.Error as err:
-            print(err)
-            print('Error writing a Facebook post in the DB.')
+            print('Error writing a Facebook post in the DB. ' + str(err))
         except AttributeError as err:
-            print(err)
-            print('post register can\'t be stored.')
+            print('post register can\'t be stored. ' + str(err))
 
     def readPost(self, fbid: int):
         try:
@@ -57,8 +50,7 @@ class FacebookPostDB:
             self.db.closeConnection()
 
         except mysql.connector.Error as ex:
-            print(ex)
-            print('Error reading a Facebook post in the DB.')
+            print('Error reading a Facebook post in the DB.' + str(ex))
         return post
 
     def readPosts(self):
@@ -86,6 +78,5 @@ class FacebookPostDB:
             self.db.closeConnection()
 
         except mysql.connector.Error as ex:
-            print(ex.fp.read())
-            print('Error reading Facebook posts in the DB.')
+            print('Error reading Facebook posts in the DB.' + str(ex.fp.read()))
         return posts
