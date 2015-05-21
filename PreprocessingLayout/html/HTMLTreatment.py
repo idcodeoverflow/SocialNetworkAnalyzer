@@ -17,14 +17,35 @@ class HTMLTreatment:
         for char in chars.characters.keys():
             self.html = self.html.replace(char, chars.characters[char])
 
+    def removerURLs(self):
+        ini, end = self.getIniEnd('http', ' ')
+
+        while ini > -1:
+            tempHTML = self.html[:ini - 1] + ' '
+            if end < self.html.__len__() and end > -1:
+                tempHTML += self.html[end + 1:]
+            self.html = tempHTML
+            ini, end = self.getIniEnd('http', ' ')
+
+    def removeHTMLLabels(self):
+        ini, end = self.getIniEnd('<', '>')
+        while ini > -1 and end > -1 and end < self.html.__len__():
+            tempHTML = self.html[:ini - 1] + ' '
+            if end + 1 < self.html.__len__():
+                print(self.html)
+                tempHTML += self.html[end + 1:]
+
+            self.html = tempHTML
+            ini, end = self.getIniEnd('<', '>')
+
     def removeLinks(self):
         iniLen = self.html.__len__()
         ini, end = self.getIniEnd('href', '>')
 
-        while self.html[ini] != '<' and ini > 0:
+        while ini > 0 and self.html[ini] != '<':
             ini -= 1
 
-        tempHTML = self.html[:ini - 1]
+        tempHTML = self.html[:ini - 1] + ' '
         tempHTML += self.html[end + 1:]
 
         while ini > -1 and end > -1:
@@ -36,8 +57,15 @@ class HTMLTreatment:
                 ini -= 1
             if ini <= -1 and end <= -1:
                 continue
-            tempHTML = self.html[:ini - 1] + ' '
-            tempHTML += self.html[end + 1:]
+
+            if ini != 0:
+                tempHTML = self.html[:ini - 1] + ' '
+            else:
+                tempHTML = self.html[:ini] + ' '
+
+            if end < self.html.__len__():
+                tempHTML += ' ' + self.html[end + 1:]
+
 
         if iniLen > self.html.__len__():
             self.html = tempHTML
@@ -116,7 +144,7 @@ class HTMLTreatment:
             text = self.html[ini : end]
             ini, end = self.getIniEndFromText(text, '"comments"', ']')
             text = text[ini : ]
-            print(text)
+            #print(text)
             count = 1
             index = 12
             #get comments JSON string
@@ -145,7 +173,7 @@ class HTMLTreatment:
                     elif text[index] == '}':
                         count -= 1
                     index += 1
-                print(text[ini - 1 : index])
+                #print(text[ini - 1 : index])
                 strs.append(text[ini - 1 : index])
                 index += 2
 
@@ -153,8 +181,8 @@ class HTMLTreatment:
             self.comments = strs
 
             #temp show results
-            for key in data.keys():
-                print(key + ' : ' + str(data[key]))
+            #for key in data.keys():
+            #    print(key + ' : ' + str(data[key]))
         return comms
 
     def getFBIds(self):

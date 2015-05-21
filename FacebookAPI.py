@@ -228,13 +228,14 @@ class FacebookAPI:
                                     text += paragraph
 
                                 textTreatment = HTMLTreatment(text)
-                                text = textTreatment.removeHTMLLabelsFromText(text)
 
-                                #textTreatment.removeLinks()
+                                textTreatment.removeHTMLLabels()
+                                textTreatment.removeLinks()
+                                textTreatment.removerURLs()
                                 textTreatment.replaceHexCharacters()
-                                #text = textTreatment.html
+                                text = textTreatment.html
 
-                                #post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
+                                post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
                                 #postAccess.insertPost(post)
                                 #fpcAccess.insertPostControl(FacebookPostControl(0, fbid, user, True))
                                 print('A post from user ' + str(facebookUserID) + ' was stored fbid: ' + str(fbid) + '\n' + text)

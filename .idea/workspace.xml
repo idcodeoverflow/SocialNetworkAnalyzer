@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
@@ -22,7 +23,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$DBConnection.coverage" NAME="DBConnection Coverage Results" MODIFIED="1424284746021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$HTMLTreatment.coverage" NAME="HTMLTreatment Coverage Results" MODIFIED="1424978857800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PreprocessingLayout" />
-    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1432139171194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1432151095736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$FacebookAPI.coverage" NAME="FacebookAPI Coverage Results" MODIFIED="1424974513061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -43,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3489736" vertical-offset="3791" max-vertical-offset="4454">
-              <caret line="230" column="83" selection-start-line="230" selection-start-column="83" selection-end-line="230" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3728" max-vertical-offset="4471">
+              <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -55,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTMLTreatment.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HTMLTreatment.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1685" max-vertical-offset="3145">
-              <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.8112676" vertical-offset="375" max-vertical-offset="3621">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -162,8 +163,8 @@
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookPost.py" />
         <option value="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
         <option value="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" />
-        <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/FacebookAPI.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
       </list>
     </option>
   </component>
@@ -199,7 +200,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,6 +312,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,8 +701,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -709,9 +710,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37683523" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3752039" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2927383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1111,19 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1462">
-          <caret line="80" column="78" selection-start-line="80" selection-start-column="78" selection-end-line="80" selection-end-column="78" />
-          <folding>
-            <marker date="1432080399809" expanded="true" signature="381:538" placeholder="INSERT INTO ..." />
-            <marker date="1432080399809" expanded="true" signature="652:654" placeholder="INSERT INTO ..." />
-            <marker date="1432080399809" expanded="true" signature="1197:1347" placeholder="SELECT idPos..post..." />
-            <marker date="1432080399809" expanded="true" signature="2197:2286" placeholder="SELECT idPos..post..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="786" max-vertical-offset="1139">
@@ -1142,21 +1130,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1277" max-vertical-offset="3145">
-          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1462">
+          <caret line="80" column="78" selection-start-line="80" selection-start-column="78" selection-end-line="80" selection-end-column="78" />
+          <folding>
+            <marker date="1432080399809" expanded="true" signature="381:538" placeholder="INSERT INTO ..." />
+            <marker date="1432080399809" expanded="true" signature="652:654" placeholder="INSERT INTO ..." />
+            <marker date="1432080399809" expanded="true" signature="1197:1347" placeholder="SELECT idPos..post..." />
+            <marker date="1432080399809" expanded="true" signature="2197:2286" placeholder="SELECT idPos..post..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3489736" vertical-offset="3791" max-vertical-offset="4454">
-          <caret line="230" column="83" selection-start-line="230" selection-start-column="83" selection-end-line="230" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3830" max-vertical-offset="4471">
+          <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8112676" vertical-offset="375" max-vertical-offset="3621">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
