@@ -1,4 +1,5 @@
 import json
+from EntitiesLayout.FacebookComment import FacebookComment
 from PreprocessingLayout.html.HexCharacterMapping import HexCharacterMapping
 
 __author__ = 'David'
@@ -7,6 +8,7 @@ __author__ = 'David'
 class HTMLTreatment:
     html = ''
     comments = []
+    commentsDict = []
     paragraphs = []
 
     def __init__(self, htmlText: str):
@@ -179,9 +181,15 @@ class HTMLTreatment:
             data = json.loads(text)
             self.comments = strs
 
+            #print('181818188888888888888888881818181818181818188----.a.a-a.slss')
             #temp show results
-            #for key in data.keys():
-            #    print(key + ' : ' + str(data[key]))
+            #other = data['comments']
+            #for key in other:
+            #    print(key)
+            #    dictionary = json.loads(str(key))
+            #    comment = FacebookComment(dictionary)
+            #   print(comment)
+            #   self.comments.append(comment)
         return comms
 
     def getFBIds(self):
@@ -201,7 +209,12 @@ class HTMLTreatment:
             print("No comments to extract.")
             return {}
         dic = json.loads(self.comments[0])
-        print('--------------------->' + str(dic))
+        for com in self.comments:
+            dic = json.loads(com)
+
+            comment = FacebookComment(dic)
+            print(comment.author)
+            print('--------------------->' + str(dic))
         return dic
 
 
