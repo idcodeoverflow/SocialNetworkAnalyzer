@@ -10,6 +10,9 @@ class FacebookPostDB:
     
     def insertPost(self, post: FacebookPost):
         try:
+            if post.text == '':
+                print('Post text is empty, this post will be ignored.')
+                return False
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
             addFBPostQuery = 'INSERT INTO post(idPost, facebookPostId, createdTime, message, facebookUserId, likesCount)' \
@@ -23,8 +26,11 @@ class FacebookPostDB:
 
         except mysql.connector.Error as err:
             print('Error writing a Facebook post in the DB. ' + str(err))
+            return False
         except AttributeError as err:
             print('post register can\'t be stored. ' + str(err))
+            return False
+        return True
 
     def readPost(self, fbid: int):
         try:

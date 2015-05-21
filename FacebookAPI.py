@@ -236,15 +236,16 @@ class FacebookAPI:
                                 text = textTreatment.html
 
                                 post = FacebookPost(facebookPostId, createdTime, text, facebookUserID, likes)
-                                #postAccess.insertPost(post)
-                                #fpcAccess.insertPostControl(FacebookPostControl(0, fbid, user, True))
-                                print('A post from user ' + str(facebookUserID) + ' was stored fbid: ' + str(fbid) + '\n' + text)
+                                completed = postAccess.insertPost(post)
+                                fpcAccess.insertPostControl(FacebookPostControl(0, fbid, user, True))
+                                if completed:
+                                    print('A post from user ' + str(facebookUserID) + ' was stored fbid: ' + str(fbid) + '\n' + text)
         except AttributeError as err:
             print('Attribute error at get pendant posts ' + str(err))
-        #except ValueError as err:
-        #    print('Value error at get pendant posts ' + str(err))
-        #except Exception as err:
-        #    print('An error has occurred while getting pendant posts ' + str(err))
+        except ValueError as err:
+            print('Value error at get pendant posts ' + str(err))
+        except Exception as err:
+            print('An error has occurred while getting pendant posts ' + str(err))
 
 
     def getPendantComments(self):
