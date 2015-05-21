@@ -30,11 +30,10 @@ class HTMLTreatment:
     def removeHTMLLabels(self):
         ini, end = self.getIniEnd('<', '>')
         while ini > -1 and end > -1 and end < self.html.__len__():
-            tempHTML = self.html[:ini - 1] + ' '
+            tempHTML = self.html[:ini] + ' '
             if end + 1 < self.html.__len__():
-                print(self.html)
                 tempHTML += self.html[end + 1:]
-
+                
             self.html = tempHTML
             ini, end = self.getIniEnd('<', '>')
 
