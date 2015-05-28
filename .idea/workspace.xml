@@ -4,16 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
-      <change type="MOVED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model\DB model.mwb.bak" afterPath="$PROJECT_DIR$/DB Model/DB Model.mwb.bak" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DB Model/DB Model.mwb" afterPath="$PROJECT_DIR$/DB Model/DB Model.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EntitiesLayout/FacebookComment.py" afterPath="$PROJECT_DIR$/EntitiesLayout/FacebookComment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" afterPath="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prueba.py" afterPath="$PROJECT_DIR$/Prueba.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout." />
     <ignored path="SocialNetworkAnalyzer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
