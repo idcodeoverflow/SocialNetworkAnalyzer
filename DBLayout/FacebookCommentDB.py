@@ -34,8 +34,11 @@ class FacebookCommentDB:
         except mysql.connector.Error as err:
             print(err)
             print('Error writing a Facebook comment in the DB.')
+            return False
         except AttributeError as err:
             print('Comment register can\'t be stored.')
+            return False
+        return True
 
     def readComment(self, fbid: int):
         try:
