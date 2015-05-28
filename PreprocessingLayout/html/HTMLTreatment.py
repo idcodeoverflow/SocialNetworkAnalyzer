@@ -203,7 +203,7 @@ class HTMLTreatment:
             ini, end = self.getIniEnd('?fbid=', '&', end, self.html.__len__())
         return lis.keys()
 
-    def commentsJSONToDictionary(self):
+    def commentsJSONToDictionary(self, postFbId: int):
         commentsObjects = []
         if self.comments.__len__() < 1:
             print("No comments to extract.")

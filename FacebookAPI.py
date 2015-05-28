@@ -6,6 +6,7 @@ import urllib.parse
 import urllib.error
 import http.cookiejar
 from mysql.connector import Timestamp
+from DBLayout.FacebookCommentDB import FacebookCommentDB
 from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
 from EntitiesLayout.FacebookPostControl import FacebookPostControl
@@ -249,7 +250,38 @@ class FacebookAPI:
 
 
     def getPendantComments(self):
-        index = self._START_NUMBER_
+        try:
+            accessProfilePage = FacebookProfilePageDB()
+            accessComment = FacebookCommentDB()
+            accessUser = FacebookUserDB()
+            users = accessUser.readUsers()
+            comments = []
+
+            for user in users:
+                profilesPages = accessProfilePage.readProfilesPagesFromUser(user)
+
+                for profilePage in profilesPages:
+                    htmlTreament = HTMLTreatment(profilePage.profilePage)
+                    fbids = htmlTreament.getFBIds()
+                    for fbid in fbids:
+                        print(fbid)
+                        text = self.getPostPage(user,fbid)
+                        tr = HTMLTreatment(text)
+                        print('*************************************************')
+                        tr.getFacebookComments()
+                        comments = tr.commentsJSONToDictionary(fbid)
+                        for comment in comments:
+                            success = accessComment.insertComment(comment, fbid)
+                            if success:
+                                print('A post from user ' + str(user.facebookUserId) + ' was stored fbid: ' + str(fbid))
+
+        except AttributeError as err:
+            print('Attribute error at get pendant comments ' + str(err))
+        except ValueError as err:
+            print('Value error at get pendant comments ' + str(err))
+        except Exception as err:
+            print('An error has occurred while getting pendant comments ' + str(err))
+
 
 
 
