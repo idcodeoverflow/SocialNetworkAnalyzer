@@ -269,13 +269,11 @@ class FacebookAPI:
                         tr = HTMLTreatment(text)
                         print('*************************************************')
                         tr.getFacebookComments()
-                        comments = tr.commentsJSONToDictionary()
+                        comments = tr.commentsJSONToDictionary(fbid)
                         for comment in comments:
-                            success = accessComment.insertComment(comment)
+                            success = accessComment.insertComment(comment, fbid)
                             if success:
-                                print('A post from user ' + str(user.facebookUserId) + ' was stored fbid: ' + str(fbid) + '\n' + comment)
-
-
+                                print('A post from user ' + str(user.facebookUserId) + ' was stored fbid: ' + str(fbid))
 
         except AttributeError as err:
             print('Attribute error at get pendant comments ' + str(err))

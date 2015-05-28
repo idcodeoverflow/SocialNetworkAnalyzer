@@ -11,20 +11,21 @@ class FacebookCommentDB:
     def __init__(self):
         self.db = DBConnection()
 
-    def insertComment(self, comment: FacebookComment):
+    def insertComment(self, comment: FacebookComment, postFbId):
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
-            addFBCommentQuery = 'INSERT INTO comment(idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
+            addFBCommentQuery = 'INSERT INTO comment(idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
                              'canRemove, canReport, canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, ' \
                              'timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId, ' \
                              'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)' \
-                             'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);'
-            dataUser = (comment.idComment, comment.id, comment.fbid, comment.legacyid, comment.text, comment.author, comment.ftidentifier, comment.isFeatured,
+                             'VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);'
+            dataUser = (comment.id, comment.fbid, postFbId, comment.legacyId, comment.body.text, comment.author, comment.ftIdentifier, comment.isFeatured,
                         comment.likeCount, comment.hasViewerLiked, comment.canRemove, comment.canReport, comment.canEdit, comment.source, comment.viewerCanLike,
-                        comment.canComment, comment.isAuthorWeakReference, comment.isTranslatable, comment.timestamp_time, comment.timestamp_text, comment.timestamp_verbose,
-                        comment.spamReplyCount, comment.interestingReplyOffset, comment.interestingReplyId, comment.recentReplyTimestamp_time, comment.recentReplyTimestamp_text,
-                        comment.recentReplyTimestamp_verbose)
+                        comment.canComment, comment.isAuthorWeakReference, comment.isTranslatable, comment.timestamp.time,
+                        comment.timestamp.text, comment.timestamp.verbose, comment.spamReplyCount, comment.interestingReplyOffset,
+                        comment.interestingReplyId, comment.recentReplyTimestamp.time, comment.recentReplyTimestamp.text,
+                        comment.recentReplyTimestamp.verbose)
 
             cursor.execute(addFBCommentQuery, dataUser)
             cnx.commit()
@@ -32,11 +33,10 @@ class FacebookCommentDB:
             self.db.closeConnection()
 
         except mysql.connector.Error as err:
-            print(err)
-            print('Error writing a Facebook comment in the DB.')
+            print('Error writing a Facebook comment in the DB. ' + str(err))
             return False
         except AttributeError as err:
-            print('Comment register can\'t be stored.')
+            print('Comment register can\'t be stored. ' + str(err))
             return False
         return True
 

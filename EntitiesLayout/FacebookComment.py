@@ -7,20 +7,29 @@ class FacebookComment:
 
 
 
-    def __init__(self, mp: dict = {}):
+    def __init__(self, mp: dict = {}, postFbId: int = 0):
         time = 0
         text = ''
         verbose = ''
         ttext = ''
         ranges = []
         aggregatedRanges = []
+        self.postFbId = postFbId
         try:
             if 'id' in mp.keys():
                 self.id = mp['id']
+            else:
+                self.id = None
+
             if 'fbid' in mp.keys():
                 self.fbid = mp['fbid']
+            else:
+                self.fbid = None
+
             if 'legacyid' in mp.keys():
                 self.legacyId = mp['legacyid']
+            else:
+                self.legacyId = None
 
             ttext = ''
             ranges = []
@@ -29,38 +38,80 @@ class FacebookComment:
             if 'body' in mp.keys():
                 if 'text' in mp['body'].keys():
                     ttext = mp['body']['text']
+                else:
+                    ttext = None
                 if 'ranges' in mp['body'].keys():
                     ranges = mp['body']['ranges']
                 if 'aggregatedranges' in mp['body'].keys():
                     aggregatedRanges = mp['body']['aggregatedranges']
                 self.body = CommentBody(ttext, ranges, aggregatedRanges)
+            else:
+                self.body = CommentBody(None, None, None)
 
             if 'author' in mp.keys():
                 self.author = mp['author']
+            else:
+                self.author = None
+
             if 'ftentidentifier' in mp.keys():
                 self.ftIdentifier = mp['ftentidentifier']
+            else:
+                self.ftIdentifier = None
+
             if 'isfeatured' in mp.keys():
                 self.isFeatured = mp['isfeatured']
+            else:
+                self.isFeatured = None
+
             if 'likecount' in mp.keys():
                 self.likeCount = mp['likecount']
+            else:
+                self.likeCount = None
+
             if 'hasviewerliked' in mp.keys():
                 self.hasViewerLiked = mp['hasviewerliked']
+            else:
+                self.hasViewerLiked = None
+
             if 'canremove' in mp.keys():
                 self.canRemove = mp['canremove']
+            else:
+                self.canRemove = None
+
             if 'canreport' in mp.keys():
                 self.canReport = mp['canreport']
+            else:
+                self.canReport = None
+
             if 'canedit' in mp.keys():
                 self.canEdit = mp['canedit']
+            else:
+                self.canEdit = None
+
             if 'source' in mp.keys():
                 self.source = mp['source']
+            else:
+                self.source = None
+
             if 'viewercanlike' in mp.keys():
                 self.viewerCanLike = mp['viewercanlike']
+            else:
+                self.viewerCanLike = None
+
             if 'cancomment' in mp.keys():
                 self.canComment = mp['cancomment']
+            else:
+                self.canComment = None
+
             if 'isauthorweakreference' in mp.keys():
                 self.isAuthorWeakReference = mp['isauthorweakreference']
+            else:
+                self.isAuthorWeakReference = None
+
             if 'istranslatable' in mp.keys():
                 self.isTranslatable = mp['istranslatable']
+            else:
+                self.isTranslatable = None
 
             time = 0
             text = ''
@@ -74,11 +125,17 @@ class FacebookComment:
                 if 'verbose' in mp['timestamp'].keys():
                     verbose = mp['timestamp']['verbose']
                 self.timestamp = Timestamp(time, text, verbose)
+            else:
+                self.timestamp = Timestamp(None, None, None)
 
             if 'interestingreplyoffset' in mp.keys():
                 self.interestingReplyOffset = mp['interestingreplyoffset']
+            else:
+                self.interestingReplyOffset = None
             if 'interestingreplyid' in mp.keys():
                 self.interestingReplyId = mp['interestingreplyid']
+            else:
+                self.interestingReplyId = None
 
             if 'recentreplytimestamp' in mp.keys():
                 if 'time' in mp['recentreplytimestamp'].keys():
@@ -88,9 +145,13 @@ class FacebookComment:
                 if 'verbose' in mp['recentreplytimestamp'].keys():
                     verbose = mp['recentreplytimestamp']['verbose']
                 self.recentReplyTimestamp = Timestamp(time, text, verbose)
+            else:
+                self.recentReplyTimestamp = Timestamp(None, None, None)
 
             if 'spamreplycount' in mp.keys():
                 self.spamReplyCount = mp['spamreplycount']
+            else:
+                self.spamReplyCount = None
 
         except KeyError:
             print('One attribute is missing in comment.')
