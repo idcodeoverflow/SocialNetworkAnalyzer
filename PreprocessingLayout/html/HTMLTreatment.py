@@ -213,8 +213,10 @@ class HTMLTreatment:
             dic = json.loads(com)
 
             comment = FacebookComment(dic)
+            commentsObjects.append(comment)
             print(comment.author)
             print('--------------------->' + str(dic))
-        return dic
+            print(comment.timestamp.verbose)
+        return commentsObjects
 
 

@@ -39,7 +39,6 @@ profilePage = accessProfilePage.readProfilesPagesFromUser(user)[0]
 htmlTreament = HTMLTreatment(profilePage.profilePage)
 fbids = htmlTreament.getFBIds()
 print('8888888888888888888888888888888888888888888888888888888888888888888888888888888')
-print(profilePage.profilePage)
 
 for fbid in fbids:
     print(fbid)
@@ -48,7 +47,6 @@ for fbid in fbids:
     print('*************************************************')
     tr.getFacebookComments()
     tr.commentsJSONToDictionary()
-    print(text)
 
 
 #print(htmlTreament.html)
