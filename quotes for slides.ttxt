@@ -1,0 +1,55 @@
+Los líderes de grupos sociales son definidos como aquellas personas que inician demasiadas cadenas de influencia de acuerdo al número de cadenas a las que pertenecen.  En las ciencias sociales, la influencia se define como el poder de negociación, control sobre la información o persuasión. Burt describe que la influencia social ocurre cuando las emociones de alguien, opiniones o comportamientos son afectados por otros, y la influencia viene de ser un puente sobre un hoyo en la estructura. (Tsai, Tzeng, Lin, & Chen, 2014)
+
+Un usuario es una persona, la cual se suscribe a Facebook, hace amistad con otros usuarios, se convierte en un miembro de una comunidad. (Safaei, Sahan, & Ilkan, 2009)
+
+
+Los usuarios pueden crear álbumes para sus fotos, en estas fotos otros amigos pueden ser etiquetados. (Safaei, Sahan, & Ilkan, 2009)
+
+Las investigaciones pasadas acerca del tema muestran que el uso de algoritmos greedy pueden dar una buena solución aproximada al problema de identificación de nodos líderes en las redes sociales, sin embargo los algoritmos greedy enfrentan un problema computacional, sobre él uso de recursos y el tiempo de cómputo requerido. (Kimura, Saito, Nakano, & Motoda, 2010) 
+
+El uso de la inteligencia artificial en el apoyo de la investigación sobre las redes sociales ya se ha realizado con anterioridad, Cheong y Lee identificaron mensajes sobre las últimas tendencias del momento o eventos especiales en una red social usando técnicas de visualización y minería de datos basada en métodos inteligencia artificial. (Fazeen, Dantu, & Guturu, 2011)
+
+Para poder extraer información de gente anónima, necesitamos considerar la confiabilidad de los datos y desentendernos de un propósito. En adición, el trasfondo de las habilidades de los usuarios lectores, estados y condiciones mentales podrían ser de ayuda para obtener información. (Soo Cho, Yoel Yoon, Joon Kim, Yeon Lim, Kwan Kim, & Kim, 2011)
+
+Planteamiento del problema
+Enriquecer la diversidad en algoritmos para analizar las redes sociales, en este caso sobre el análisis del comportamiento humano específicamente en el campo de la influencia de líderes sobre otras personas. Ya que un creciente número de personas se están uniendo a las redes sociales donde ellos cultivan sus amistades, comparten intereses comunes y discuten diferentes tópicos. A propósito de estas interacciones miembros de redes sociales se afectan entre sí en su comportamiento y opinión. (Carolin, Johannes, & Freimut, 2013)
+
+Entender como los usuarios se influencian unos a otros, puede tener varios beneficios. Por ejemplo, el marketing viral, recomendaciones, dispersión de la información, entre otros. (Liu, Tang, Han, & Yang, 2012) 
+
+En las redes sociales como Facebook y Twitter, los usuarios son frecuentes a seguir amigos influyentes en su círculo social para retwettear un metroblog o dar like una foto o comentario. (Liu, Tang, Han, & Yang, 2012)
+
+Los efectos directos de la diversidad están basados en evidencia, “… que la existencia de la diversidad, por sí misma, puede afectar ciertos procesos organizacionales, creatividad, y resolución de problemas, que están directamente relacionados al rendimiento”. Cox (Cox, Cultural Diversity in Organizations, 1993), Copeland (Copeland, 1988), Mandell y Kohler Gray (Mandell & Kohler-Gray, 1990) y Lobel and McLeod (Cox, Lobel, & McLeod, Effects of ethnic group cultural difference on cooperative versus competitive behaviour in a group task, 1991)
+
+Los círculos sociales están en constante evolución de acuerdo a lo investigado y los seres humanos también enfrentan cambios a lo largo de su vida de acuerdo a la generación a la que pertenezcan (Bentley, Ormerod, & Batty, 2011), esto nos dice que las empresas y los negocios también deben de evolucionar, aquellas empresas que logran visualizar dichos cambios antes que los demás logran tener una ventaja competitiva sobre otras,
+
+Dentro de los grupos se han identificado 4 prototipos clásicos, que, según su rol son:
+•	Portavoz: es el responsable dentro de una organización para dirigirse a los medios de comunicación. Puede ser el presidente/consejero delegado, el director de relaciones públicas u otro alto directivo designado por la organización para tal fin; el puesto puede recaer también en alguien diferente especialmente designado. Es habitual que los portavoces reciban formación específica para mejorar su desempeño frente a los periodistas.
+•	Chivo expiatorio: es la denominación que se le da a una persona o grupo de ellas a quienes se quiere hacer culpables de algo de lo que no son, sirviendo así de excusa a los fines del inculpador.
+•	Líder: es esa persona comprometida en asumir una posición de poder debido a un compromiso y convicción dentro de un ambiente de equipo. Lo que diferencia a un líder con los demás, es su carisma y espíritu de lucha incesante con el fin de lograr un bien común o meta en la vida.
+•	Saboteador: es aquel que realiza una modificación, destrucción, obstrucción o cualquier intervención en una operación ajena, con el propósito de obtener algún beneficio para uno mismo.
+
+Estos roles y dinámicas de grupos las podemos ver reflejados en las redes sociales, en este caso en Facebook. (Scott, 2011)
+
+La Minería de Datos permite que dicha información sea analizada utilizando técnicas que prometen proveer conocimiento sustancial del área. (Scott, 2011)
+
+La minería de datos es el proceso de exploración y análisis, por medios automáticos o semi-automáticos, de grandes cantidades de datos con la intención de descubrir patrones útiles. En otras palabras, la minería de datos es el proceso completo de revelar patrones útiles y relaciones en los datos usando técnicas como la inteligencia artificial, machine learning y estadísticas a través de herramientas de análisis de datos avanzadas. (Bozkır, Güzin Mazman, & Akçapınar Sezer, 2010)
+
+La minería de datos web puede ser dividida en 3 categorías principales: minería de la estructura web, minería de contenido web y minería de uso web. La minería de estructura web es la técnica de extracción de links y estructura de sitios web con el fin de descubrir relaciones previas desconocidas entre las páginas web. La minería de contenido de web, algunas veces referenciada como minería de texto, es el proceso de escaneo y extracción de contenido de una página web, por ejemplo, texto, imágenes, gráficas, audio, video e hipervínculos, para determinar la relevancia del contenido de un query de búsqueda. La minería de contenido web es particularmente útil en el análisis de redes sociales debido al ambiente rico en contenido de los sitios de redes sociales. La minería de uso web es una técnica usada para rastrear y analizar el comportamiento de navegación de los usuarios. (Al-Saggaf & Islam, 2014) 
+
+Los métodos de minería de datos son clasificados en dos categorías: predictiva y descriptiva. El propósito de los métodos de la minería de datos predictiva es hacer predicciones en casos no vistos utilizando casos vistos en modelos entrenados. El propósito de las técnicas descriptivas de la minería de datos es descubrir relaciones profundas, correlaciones y propiedades descriptivas de los datos. (Bozkır, Güzin Mazman, & Akçapınar Sezer, 2010)
+
+Muchos textos de los usuarios contienen importantes y variadas informaciones. Podremos obtener esta información si la semántica puede ser extraída de los textos en una red social. (Soo Cho, Yoel Yoon, Joon Kim, Yeon Lim, Kwan Kim, & Kim, 2011) 
+
+En segundo lugar, ¿pueden los amigos de tus amigos tener algún tipo de influencia en tu comportamiento?, Interesantemente, la respuesta es sí. Por ejemplo, se ha estudiado con anterioridad la influencia de la felicidad, y se encontró que la felicidad se esparce a tres grados de separación. (Liu, Tang, Han, & Yang, 2012) 
+
+Hay dos métodos para analizar la psicología de las personas a través de un texto, el primero es el análisis del contenido temático, y el segundo es la cuenta de palabras estratégicas. (Soo Cho, Yoel Yoon, Joon Kim, Yeon Lim, Kwan Kim, & Kim, 2011) 
+
+El objetivo de la indexación es identificar un conjunto de atributos que son informativos sobre la categoría de un comentario, específicamente hablando categorizarlo como comentario popular, comentario no popular o spam, la indexación nos permitirá tener un mejor desempeño en la clasificación. Investigaciones sobre el flujo de palabras sugieren que funcionan bien como unidades de representación y el orden de estas unidades en un documento no tiene mayor importancia. Incluso investigaciones pasadas utilizando minería de texto descubrieron que el uso de pares de palabras da resultados más pobres que el uso de palabras simples. (Chou, Sinha, & Zhao, 2008)
+
+A través de esquemas en los que se les da un peso a los términos es la forma en la que se utilizará para trabajar. La frecuencia de términos y la frecuencia inversa de términos se ha encontrado como efectiva en la categorización de textos y es de las más ampliamente usadas. La frecuencia de términos pesará una palabra de un comentario de Facebook por el número de veces que aparecen palabras de su misma categoría dentro del comentario o publicación que se está analizando. Mientras más términos de una misma categoría aparezcan más representativa es dicha categoría para la publicación o comentario. La frecuencia inversa de términos ajusta la frecuencia en que aparece un término de una misma clase en un comentario o publicación por la cantidad de veces que dicha clase es utilizada durante todo el conjunto de comentarios en la publicación que se está analizando. (Chou, Sinha, & Zhao, 2008)
+
+El algoritmo “Porter Stemming” es uno de los más utilizados para remover sufijos. La segunda forma de reducir la dimensionalidad es seleccionar un conjunto de atributos significativos de acuerdo a la característica de seleccionabilidad, hay mucha información sobre funciones de seleccionabilidad. (Chou, Sinha, & Zhao, 2008)
+
+La información generada por las técnicas de minería de datos elude la normativa de protección de la privacidad de la información personal. Esto es porque los datos recolectados tienden a ser, primeramente públicamente accesible (no confidencial) en naturaleza, y después, la nueva información generada consiste de análisis de patrones y relaciones que son meramente inferidos o implicados desde las vastas cantidades de instancias individuales de información personal dentro de grandes datasets. Como  resultado, el método de data mining no parece violar directamente la información personal. (Al-Saggaf & Islam, 2014)
+
+Dado que las redes sociales son usados por cientos de millones de personas, es seguro que estas influencian profundamente la vida de las personas, la mayoría del tiempo sin su conocimiento de las implicaciones. (Agrawal, Budak, El Abbadi, Georgiou, & Yan, 2014)
