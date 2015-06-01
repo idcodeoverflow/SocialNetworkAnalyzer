@@ -259,7 +259,7 @@ class FacebookAPI:
             comments = []
 
             for user in users:
-                print('user ' + str(user.facebookUserId))#delete
+                print('user ' + str(user.facebooUserId))#delete
                 if(user.facebookUserId < 2693):#delete
                     continue#delete
                 profilesPages = accessProfilePage.readProfilesPagesFromUser(user)
