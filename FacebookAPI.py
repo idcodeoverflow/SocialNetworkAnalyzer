@@ -205,6 +205,7 @@ class FacebookAPI:
                 print('Getting posts from user: ' + str(user.facebookUserId))
                 profiles = ufpcAccess.readProfilesPagesFromUser(user)
 
+
                 for profile in profiles:
                     htmlTreatment = HTMLTreatment(profile.profilePage)
                     fbids = htmlTreatment.getFBIds()
@@ -258,6 +259,9 @@ class FacebookAPI:
             comments = []
 
             for user in users:
+                print('user ' + str(user.facebookUserId))#delete
+                if(user.facebookUserId < 2166):#delete
+                    continue#delete
                 profilesPages = accessProfilePage.readProfilesPagesFromUser(user)
 
                 for profilePage in profilesPages:
@@ -273,14 +277,14 @@ class FacebookAPI:
                         for comment in comments:
                             success = accessComment.insertComment(comment, fbid)
                             if success:
-                                print('A post from user ' + str(user.facebookUserId) + ' was stored fbid: ' + str(fbid))
+                                print('A comment from user ' + str(user.facebookUserId) + ' was stored fbid: ' + str(fbid))
 
         except AttributeError as err:
             print('Attribute error at get pendant comments ' + str(err))
-        except ValueError as err:
-            print('Value error at get pendant comments ' + str(err))
-        except Exception as err:
-            print('An error has occurred while getting pendant comments ' + str(err))
+        #except ValueError as err:
+        #    print('Value error at get pendant comments ' + str(err))
+        #except Exception as err:
+        #    print('An error has occurred while getting pendant comments ' + str(err))
 
 
 
