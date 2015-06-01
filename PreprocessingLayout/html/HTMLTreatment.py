@@ -178,18 +178,8 @@ class HTMLTreatment:
                 strs.append(text[ini - 1 : index])
                 index += 2
 
-            data = json.loads(text)
+            #data = json.loads(text)
             self.comments = strs
-
-            #print('181818188888888888888888881818181818181818188----.a.a-a.slss')
-            #temp show results
-            #other = data['comments']
-            #for key in other:
-            #    print(key)
-            #    dictionary = json.loads(str(key))
-            #    comment = FacebookComment(dictionary)
-            #   print(comment)
-            #   self.comments.append(comment)
         return comms
 
     def getFBIds(self):
@@ -208,11 +198,18 @@ class HTMLTreatment:
         if self.comments.__len__() < 1:
             print("No comments to extract.")
             return {}
-        dic = json.loads(self.comments[0])
+        dic = {}
+        try:
+            dic = json.loads(self.comments[0])
+        except Exception as err:
+            print('Error 1 at load JSON in dictionary: ' + str(err))
         for com in self.comments:
-            dic = json.loads(com)
+            try:
+                dic = json.loads(com)
+            except Exception as err:
+                print('Error 2 at load JSON in dictionary: ' + str(err))
 
-            comment = FacebookComment(dic)
+            comment = FacebookComment(dic, postFbId)
             commentsObjects.append(comment)
             print(comment.author)
             print('--------------------->' + str(dic))
