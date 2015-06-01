@@ -260,7 +260,7 @@ class FacebookAPI:
 
             for user in users:
                 print('user ' + str(user.facebookUserId))#delete
-                if(user.facebookUserId < 2166):#delete
+                if(user.facebookUserId < 2693):#delete
                     continue#delete
                 profilesPages = accessProfilePage.readProfilesPagesFromUser(user)
 
