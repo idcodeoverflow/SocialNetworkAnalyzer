@@ -260,7 +260,7 @@ class FacebookAPI:
 
             for user in users:
                 print('user ' + str(user.facebookUserId))#delete
-                if(user.facebookUserId < 5338):#delete
+                if(user.facebookUserId < 5739):#delete
                     continue#delete
                 profilesPages = accessProfilePage.readProfilesPagesFromUser(user)
 
@@ -281,10 +281,10 @@ class FacebookAPI:
 
         except AttributeError as err:
             print('Attribute error at get pendant comments ' + str(err))
-        #except ValueError as err:
-        #    print('Value error at get pendant comments ' + str(err))
-        #except Exception as err:
-        #    print('An error has occurred while getting pendant comments ' + str(err))
+        except ValueError as err:
+            print('Value error at get pendant comments ' + str(err))
+        except Exception as err:
+            print('An error has occurred while getting pendant comments ' + str(err))
 
 
 
