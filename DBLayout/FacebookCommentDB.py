@@ -41,13 +41,14 @@ class FacebookCommentDB:
         return True
 
     def readComment(self, fbid: int):
+        comments = []
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
             readFBCommentQuery = ('SELECT idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
                              'canRemove, canReport, canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, ' \
                              'timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId, ' \
-                             'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose FROM comment WHERE fbid = %s;')
+                             'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose FROM comment WHERE postFbId = %s;')
 
             dataUser = (fbid,)
 
@@ -61,7 +62,7 @@ class FacebookCommentDB:
                                           canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time,
                                           timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId,
                                           recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)
-
+                comments.append(comment)
             cursor.close()
             self.db.closeConnection()
 

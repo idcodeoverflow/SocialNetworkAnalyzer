@@ -288,7 +288,19 @@ class FacebookAPI:
 
 
     def analyzePostsNComments(self):
+        resultsFile = open('socialNetworkAnalyzerResult.txt', 'w')
+        postDB = FacebookPostDB
+        commentDB = FacebookCommentDB()
 
+        posts = postDB.readPosts()
+
+        for post in posts:
+            comments = commentDB.readComment(post.facebookPostId)
+            for comment in comments:
+                print(comment.body.text)
+
+
+        resultsFile.close()
         return 0
 
 

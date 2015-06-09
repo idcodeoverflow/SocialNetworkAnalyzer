@@ -1,13 +1,9 @@
 from DBLayout.FacebookCommentDB import FacebookCommentDB
 from DBLayout.FacebookPostDB import FacebookPostDB
 from EntitiesLayout.FacebookPost import FacebookPost
+from FacebookAPI import FacebookAPI
 
 
+api = FacebookAPI(5, ' ', True)
 
-
-postsDB = FacebookPostDB()
-commentsDB = FacebookCommentDB()
-comments = commentsDB.readComments()
-
-
-print(commentsDB.readComment(10102044342642751).body.text)
+api.analyzePostsNComments()
