@@ -1,3 +1,4 @@
+from DBLayout.FacebookCommentDB import FacebookCommentDB
 from DBLayout.FacebookPostDB import FacebookPostDB
 from EntitiesLayout.FacebookPost import FacebookPost
 
@@ -5,6 +6,8 @@ from EntitiesLayout.FacebookPost import FacebookPost
 
 
 postsDB = FacebookPostDB()
-posts = postsDB.readPosts()
+commentsDB = FacebookCommentDB()
+comments = commentsDB.readComments()
 
-print(postsDB.readPost(10102017646077881).text)
+
+print(commentsDB.readComment(10102044342642751).body.text)

@@ -5,8 +5,6 @@ __author__ = 'David'
 
 class FacebookComment:
 
-
-
     def __init__(self, mp: dict = {}, postFbId: int = 0):
         time = 0
         text = ''
@@ -155,6 +153,37 @@ class FacebookComment:
 
         except KeyError:
             print('One attribute is missing in comment.')
+
+
+    def initialize(self, id, fbid, postFbId, legacyid, text, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport,
+                                          canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time,
+                                          timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId,
+                                          recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose):
+        self.postFbId = postFbId
+        self.id = id
+        self.fbid = fbid
+        self.legacyId = legacyid
+        self.body = CommentBody(text, None, None)
+        self.ftIdentifier = ftidentifier
+        self.isFeatured = isFeatured
+        self.likeCount = likeCount
+        self.hasViewerLiked = hasViewerLiked
+        self.canRemove = canRemove
+        self.canReport = canReport
+        self.canEdit = canEdit
+        self.source = source
+        self.viewerCanLike = viewerCanLike
+        self.canComment = canComment
+        self.isAuthorWeakReference = isAuthorWeakReference
+        self.isTranslatable = isTranslatable
+        self.timestamp = Timestamp(timestamp_time, timestamp_text, timestamp_verbose)
+        self.spamReplyCount = spamReplyCount
+        self.interestingReplyOffset = interestingReplyOffset
+        self.interestingReplyId = interestingReplyId
+        self.recentReplyTimestamp = Timestamp(recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)
+
+
+
 
 
 
