@@ -46,10 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Prueba.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Prueba.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prueba.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state vertical-scroll-proportion="0.4214876" vertical-offset="0" max-vertical-offset="363">
               <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
@@ -58,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookComment.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FacebookComment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3305785" vertical-offset="33" max-vertical-offset="3281">
+            <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="3281">
               <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding />
             </state>
@@ -1101,21 +1101,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="3281">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state vertical-scroll-proportion="0.4214876" vertical-offset="0" max-vertical-offset="363">
           <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3305785" vertical-offset="33" max-vertical-offset="3281">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
