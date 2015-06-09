@@ -45,12 +45,8 @@ class FacebookPostDB:
             cursor.execute(readFBPostQuery, dataPost)
 
             for (idPost, facebookPostId, createdTime, message, facebookUserId, likesCount) in cursor:
-                mp['targetfbid'] = facebookPostId
-                mp['createdTime'] = createdTime
-                mp['text'] = message
-                mp['userId'] = facebookUserId
-                mp['likecount'] = likesCount
-                post = FacebookPost(mp)
+
+                post = FacebookPost(facebookPostId, createdTime, message, facebookUserId, likesCount)
 
             cursor.close()
             self.db.closeConnection()
@@ -72,12 +68,8 @@ class FacebookPostDB:
             cursor.execute(readFBPostsQuery)
 
             for (idPost, facebookPostId, createdTime, message, facebookUserId, likesCount) in cursor:
-                mp['targetfbid'] = facebookPostId
-                mp['createdTime'] = createdTime
-                mp['text'] = message
-                mp['userId'] = facebookUserId
-                mp['likecount'] = likesCount
-                post = FacebookPost(mp)
+
+                post = FacebookPost(facebookPostId, createdTime, message, facebookUserId, likesCount)
                 posts.append(post)
 
             cursor.close()

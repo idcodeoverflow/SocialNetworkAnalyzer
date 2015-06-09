@@ -287,6 +287,9 @@ class FacebookAPI:
             print('An error has occurred while getting pendant comments ' + str(err))
 
 
+    def analyzePostsNComments(self):
+
+        return 0
 
 
 
