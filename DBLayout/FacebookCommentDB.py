@@ -44,7 +44,7 @@ class FacebookCommentDB:
         try:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
-            readFBCommentQuery = ('SELECT idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
+            readFBCommentQuery = ('SELECT idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
                              'canRemove, canReport, canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, ' \
                              'timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId, ' \
                              'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose FROM comment WHERE fbid = %s;')
@@ -53,10 +53,11 @@ class FacebookCommentDB:
 
             cursor.execute(readFBCommentQuery, dataUser)
 
-            for (idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport, canEdit, source,
+            for (idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport, canEdit, source,
             viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount,
             interestingReplyOffset, interestingReplyId, recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose) in cursor:
-                comment = FacebookComment(idComment, id, fbid, legacyid, text, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport,
+                comment = FacebookComment()
+                comment.initialize(id, fbid, postFbId, legacyid, text, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport,
                                           canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time,
                                           timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId,
                                           recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)
@@ -75,7 +76,7 @@ class FacebookCommentDB:
             cnx = self.db.openConnection()
             cursor = cnx.cursor()
 
-            readFBCommentsQuery = ('SELECT idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
+            readFBCommentsQuery = ('SELECT idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, ' \
                              'canRemove, canReport, canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, ' \
                              'timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId, ' \
                              'recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose FROM comment;')
@@ -83,10 +84,11 @@ class FacebookCommentDB:
 
             cursor.execute(readFBCommentsQuery)
 
-            for (idComment, id, fbid, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport, canEdit, source,
+            for (idComment, id, fbid, postFbId, legacyid, text, author, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport, canEdit, source,
             viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time, timestamp_text, timestamp_verbose, spamReplyCount,
             interestingReplyOffset, interestingReplyId, recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose) in cursor:
-                comment = FacebookComment(idComment, id, fbid, legacyid, text, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport,
+                comment = FacebookComment()
+                comment.initialize(id, fbid, postFbId, legacyid, text, ftidentifier, isFeatured, likeCount, hasViewerLiked, canRemove, canReport,
                                           canEdit, source, viewerCanLike, canComment, isAuthorWeakReference, isTranslatable, timestamp_time,
                                           timestamp_text, timestamp_verbose, spamReplyCount, interestingReplyOffset, interestingReplyId,
                                           recentReplyTimestamp_time, recentReplyTimestamp_text, recentReplyTimestamp_verbose)
