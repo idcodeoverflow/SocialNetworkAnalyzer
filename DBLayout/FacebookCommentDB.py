@@ -1,6 +1,5 @@
 from DBLayout.DBConnection import DBConnection, mysql
 from EntitiesLayout.FacebookComment import FacebookComment
-from EntitiesLayout.FacebookUser import FacebookUser
 
 __author__ = 'David'
 
@@ -69,7 +68,7 @@ class FacebookCommentDB:
         except mysql.connector.Error as ex:
             print(ex)
             print('Error reading a Facebook Comment in the DB.')
-        return comment
+        return comments
 
     def readComments(self):
         comments = []

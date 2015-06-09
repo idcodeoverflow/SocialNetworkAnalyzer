@@ -5,12 +5,11 @@ import urllib.response
 import urllib.parse
 import urllib.error
 import http.cookiejar
-from mysql.connector import Timestamp
+
 from DBLayout.FacebookCommentDB import FacebookCommentDB
 from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
 from EntitiesLayout.FacebookPostControl import FacebookPostControl
-
 from EntitiesLayout.FacebookUser import *
 from DBLayout.FacebookPostControlDB import FacebookPostControlDB
 from DBLayout.FacebookPostDB import FacebookPostDB
@@ -289,7 +288,8 @@ class FacebookAPI:
 
     def analyzePostsNComments(self):
         resultsFile = open('socialNetworkAnalyzerResult.txt', 'w')
-        postDB = FacebookPostDB
+        postDB = FacebookPostDB()
+
         commentDB = FacebookCommentDB()
 
         posts = postDB.readPosts()
