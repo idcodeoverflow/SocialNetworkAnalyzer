@@ -291,7 +291,9 @@ class FacebookAPI:
 
     def analyzePostsNComments(self):
         resultsFile = open('socialNetworkAnalyzerResult.txt', 'w')
-        resultsFile.write('user\tlikes\tpositive\tnegative\ttotal\tclassification\tpositive_comments\tnegative_comments\ttotal_comments')
+        resultsFile.write('post\'s_user\tpost\'s_likes\tpost\'s_positive_words\tpost\'s_negative_words\tpost\'s_totalwords'
+                          '\tpost\'s_classification\tpositive_comments_count'
+                          '\tnegative_comments_count\ttotal_comments_count')
         resultsFile.write('\n')
         postDB = FacebookPostDB()
 
@@ -330,7 +332,7 @@ class FacebookAPI:
 
                 negativeComments = 0
                 positiveComments = 0
-                totalComments = 0
+                neutralComments = 0
 
 
                 for word in cleanPostTokens:
@@ -378,10 +380,11 @@ class FacebookAPI:
                             commNeutralWordsCount += 1
 
                     if commNegativeWordsCount > commPositiveWordsCount:
-                        negativeComments += 1
+                        negativeComments += 1 * max(comment.likeCount, 1)
                     elif commNegativeWordsCount < commPositiveWordsCount:
-                        positiveComments += 1
-                    totalComments += 1
+                        positiveComments += 1 * max(comment.likeCount, 1)
+                    else:
+                        neutralComments += 1 * max(comment.likeCount, 1)
 
             totalPostWords =  postNegativeWordsCount + postPositiveWordsCount + postNeutralWordsCount
 
@@ -394,7 +397,7 @@ class FacebookAPI:
             resultsFile.write(str(post.facebookUserID) + '\t' + str(post.likeCount) + '\t' + str(postPositiveWordsCount)
                               + '\t' + str(postNegativeWordsCount) + '\t' + str(totalPostWords) +
                               '\t' + postClassification + '\t' + str(positiveComments) + '\t' + str(negativeComments) +
-                              '\t' + str(totalComments))
+                              '\t' + str(neutralComments))
             resultsFile.write('\n')
 
             currentPost += 1
