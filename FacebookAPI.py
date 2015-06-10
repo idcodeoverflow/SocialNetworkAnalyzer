@@ -15,6 +15,7 @@ from DBLayout.FacebookPostControlDB import FacebookPostControlDB
 from DBLayout.FacebookPostDB import FacebookPostDB
 from EntitiesLayout.FacebookPost import FacebookPost
 from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
+from PreprocessingLayout.language.LanguageProcessor import LanguageProcessor
 
 
 __author__ = 'David'
@@ -294,10 +295,18 @@ class FacebookAPI:
 
         posts = postDB.readPosts()
 
+
+
         for post in posts:
+            languageProcessor = LanguageProcessor(post.text)
+            languageProcessor.removeSymbols()
+            postText = languageProcessor.getTokens()
+            print(postText)
+
             comments = commentDB.readComment(post.facebookPostId)
-            for comment in comments:
-                print(comment.body.text)
+            #for comment in comments:
+            #    print(comment.body.text)
+
 
 
         resultsFile.close()
