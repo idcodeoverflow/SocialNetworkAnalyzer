@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socialNetworkAnalyzerResult.txt" afterPath="$PROJECT_DIR$/socialNetworkAnalyzerResult.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\Arquitectura.docx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\Avance semestral.docx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model\DB Model.mwb" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model\DB model.mwb.bak" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\Database ER Diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\analysis result.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\opinion-lexicon-English\negative-words.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\opinion-lexicon-English\positive-words.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\quotes for slides.ttxt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\socialNetworkAnalyzerResult.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\~$ance semestral.docx" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\~$quitectura.docx" afterPath="" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.39637306" vertical-offset="6290" max-vertical-offset="7174">
-              <caret line="379" column="24" selection-start-line="379" selection-start-column="24" selection-end-line="379" selection-end-column="24" />
+              <caret line="379" column="54" selection-start-line="379" selection-start-column="54" selection-end-line="379" selection-end-column="54" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -185,20 +194,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="opinion-lexicon-English" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SocialNetworkAnalyzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SocialNetworkAnalyzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="PreprocessingLayout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -264,20 +259,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DBLayout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SocialNetworkAnalyzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SocialNetworkAnalyzer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DB Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -679,7 +660,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -687,7 +668,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3034258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3034258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.295764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1027,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opinion-lexicon-English/positive-words.txt">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6314363" vertical-offset="923" max-vertical-offset="34799">
-          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="629">
@@ -1126,7 +1097,7 @@
     <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39637306" vertical-offset="6290" max-vertical-offset="7174">
-          <caret line="379" column="24" selection-start-line="379" selection-start-column="24" selection-end-line="379" selection-end-column="24" />
+          <caret line="379" column="54" selection-start-line="379" selection-start-column="54" selection-end-line="379" selection-end-column="54" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
