@@ -1,21 +1,23 @@
 import datetime
 import json
+import string
 import urllib.request
 import urllib.response
 import urllib.parse
 import urllib.error
 import http.cookiejar
-from mysql.connector import Timestamp
+
 from DBLayout.FacebookCommentDB import FacebookCommentDB
 from DBLayout.FacebookProfilePageDB import FacebookProfilePageDB
 from DBLayout.FacebookUserDB import FacebookUserDB
 from EntitiesLayout.FacebookPostControl import FacebookPostControl
-
 from EntitiesLayout.FacebookUser import *
 from DBLayout.FacebookPostControlDB import FacebookPostControlDB
 from DBLayout.FacebookPostDB import FacebookPostDB
 from EntitiesLayout.FacebookPost import FacebookPost
 from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
+from PreprocessingLayout.language.LanguageProcessor import LanguageProcessor
+from PreprocessingLayout.language.PorterStemmer import PorterStemmer
 
 
 __author__ = 'David'
@@ -288,7 +290,47 @@ class FacebookAPI:
 
 
     def analyzePostsNComments(self):
+        resultsFile = open('socialNetworkAnalyzerResult.txt', 'w')
+        postDB = FacebookPostDB()
 
+        commentDB = FacebookCommentDB()
+
+        posts = postDB.readPosts()
+        ps = PorterStemmer()
+
+
+
+        for post in posts:
+            postText = post.text
+
+            #put all chars to lower case
+            postText = postText.lower()
+
+            languageProcessor = LanguageProcessor(postText)
+            languageProcessor.removeSymbols()
+            postTokens = languageProcessor.getTokens()
+
+            #exclude unwanted tokens which contains no letters
+            postTokens = [ tok for tok in postTokens if tok.__len__() > 1 and all(c in string.ascii_letters for c in tok) ]
+
+            #exclude empty lists
+            if postTokens.__len__() > 0:
+                #clear prefixes, plurals and things like that
+                cleanPostTokens = [ps.stem(tok, 0, tok.__len__() - 1) for tok in postTokens]
+
+                postPositiveWordsCount = 0
+                postNegativeWordsCount = 0
+
+                for word in postTokens:
+
+
+            comments = commentDB.readComment(post.facebookPostId)
+            #for comment in comments:
+            #    print(comment.body.text)
+
+
+
+        resultsFile.close()
         return 0
 
 

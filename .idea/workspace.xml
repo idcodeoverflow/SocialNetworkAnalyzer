@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\language\negative.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\language\positive.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
@@ -22,7 +27,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$DBConnection.coverage" NAME="DBConnection Coverage Results" MODIFIED="1424284746021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$HTMLTreatment.coverage" NAME="HTMLTreatment Coverage Results" MODIFIED="1424978857800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PreprocessingLayout" />
-    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1433891146822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1433964246525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$FacebookAPI.coverage" NAME="FacebookAPI Coverage Results" MODIFIED="1424974513061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -46,8 +51,8 @@
       <file leaf-file-name="Prueba.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prueba.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -58,63 +63,51 @@
       <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4510" max-vertical-offset="4862">
-              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5865">
+              <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PorterStemming.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PorterStemming.py">
+      <file leaf-file-name="HTMLTreatment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5138" max-vertical-offset="6307">
-              <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3791">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestrictedSymbolsMapping.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
+      <file leaf-file-name="HexCharacterMapping.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HexCharacterMapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="680">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7438" max-vertical-offset="7837">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6739726" vertical-offset="94" max-vertical-offset="459">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="527">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacebookComment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
+      <file leaf-file-name="NegativeDictionary.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="3774">
-              <caret line="157" column="43" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.34085214" vertical-offset="0" max-vertical-offset="81481">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacebookCommentDB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookCommentDB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1802">
-              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-              <folding>
-                <marker date="1433890992601" expanded="true" signature="463:1147" placeholder="INSERT INTO ..." />
-                <marker date="1433890992601" expanded="true" signature="2514:3056" placeholder="SELECT idCom..comment..." />
-                <marker date="1433890992601" expanded="true" signature="4606:5134" placeholder="SELECT idCom..comment..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -140,7 +133,6 @@
         <option value="C:/Python34/Lib/site-packages/mechanize/__init__.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/HexCharacterMapping.py" />
-        <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
         <option value="$PROJECT_DIR$/DBLayout/DBConnection.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookUser.py" />
         <option value="$PROJECT_DIR$/DBLayout/FacebookUserDB.py" />
@@ -148,16 +140,19 @@
         <option value="$PROJECT_DIR$/PreprocessingLayout/html/HexCharacterMapping.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookPostControl.py" />
         <option value="$PROJECT_DIR$/DBLayout/FacebookPostControlDB.py" />
-        <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/PorterStemming}.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/PorterStemming.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookPost.py" />
         <option value="$PROJECT_DIR$/DBLayout/FacebookPostDB.py" />
         <option value="$PROJECT_DIR$/EntitiesLayout/FacebookComment.py" />
-        <option value="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
         <option value="$PROJECT_DIR$/Prueba.py" />
-        <option value="$PROJECT_DIR$/FacebookAPI.py" />
+        <option value="$PROJECT_DIR$/DBLayout/FacebookCommentDB.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/Negative.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/Positive.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
+        <option value="$PROJECT_DIR$/FacebookAPI.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
       </list>
     </option>
   </component>
@@ -193,6 +188,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,6 +204,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SocialNetworkAnalyzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocialNetworkAnalyzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocialNetworkAnalyzer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="opinion-lexicon-English" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,7 +315,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,6 +334,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\language" />
       <recent name="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\DB Model" />
       <recent name="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\html" />
       <recent name="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\EntitiesLayout" />
@@ -670,7 +680,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427486206689</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add features in Entities Layout.">
+      <created>1433892682432</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1433892682432</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -703,9 +719,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3588907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3034258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25037822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27760968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -764,9 +780,9 @@
     <MESSAGE value="Add HTML Treatment for pre-processing" />
     <MESSAGE value="Fix issues in Login method." />
     <MESSAGE value="Add Hex Character replacement for html treatment" />
-    <MESSAGE value="Add features in Entities Layout." />
     <MESSAGE value="Update DB model to support comments in posts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update DB model to support comments in posts." />
+    <MESSAGE value="Add features in Entities Layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add features in Entities Layout." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -776,27 +792,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2017" max-vertical-offset="3196">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prueba.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="629">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookProfilePageDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3196">
@@ -1007,13 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HexCharacterMapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2045977" vertical-offset="7402" max-vertical-offset="7837">
-          <caret line="379" column="40" selection-start-line="379" selection-start-column="40" selection-end-line="379" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBLayout/FacebookUserDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1281" max-vertical-offset="1666">
@@ -1056,13 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3217" max-vertical-offset="3825">
-          <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookUser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
@@ -1070,79 +1051,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookPost.py">
+    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.02" vertical-offset="0" max-vertical-offset="459">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2571" max-vertical-offset="3774">
+          <caret line="157" column="43" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
+    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookPost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5785124" vertical-offset="572" max-vertical-offset="1428">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9068493" vertical-offset="26" max-vertical-offset="459">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBLayout/FacebookCommentDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1802">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding>
-            <marker date="1433890992601" expanded="true" signature="463:1147" placeholder="INSERT INTO ..." />
-            <marker date="1433890992601" expanded="true" signature="2514:3056" placeholder="SELECT idCom..comment..." />
-            <marker date="1433890992601" expanded="true" signature="4606:5134" placeholder="SELECT idCom..comment..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="927" max-vertical-offset="1819">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EntitiesLayout/FacebookComment.py">
+    <entry file="file://$PROJECT_DIR$/opinion-lexicon-English/positive-words.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2571" max-vertical-offset="3774">
-          <caret line="157" column="43" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.6314363" vertical-offset="923" max-vertical-offset="34799">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48872182" vertical-offset="757" max-vertical-offset="1428">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34272">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4510" max-vertical-offset="4862">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="629">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3791">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PorterStemming.py">
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/html/HexCharacterMapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5138" max-vertical-offset="6307">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7438" max-vertical-offset="7837">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PorterStemmer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.776942" vertical-offset="1650" max-vertical-offset="6307">
           <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py">
+    <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="680">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5865">
+          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6739726" vertical-offset="94" max-vertical-offset="459">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="527">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34085214" vertical-offset="0" max-vertical-offset="81481">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
       </provider>

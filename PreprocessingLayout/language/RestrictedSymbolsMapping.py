@@ -28,7 +28,4 @@ class RestrictedSymbolsMapping:
         self.symbols['-'] = ' '
         self.symbols['@'] = ' '
         self.symbols['_'] = ' '
-        self.symbols['@'] = ' '
-        self.symbols['@'] = ' '
-        self.symbols['@'] = ' '
         self.symbols['\''] = ' '
