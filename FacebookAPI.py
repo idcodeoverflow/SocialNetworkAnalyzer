@@ -291,6 +291,8 @@ class FacebookAPI:
 
     def analyzePostsNComments(self):
         resultsFile = open('socialNetworkAnalyzerResult.txt', 'w')
+        resultsFile.write('user\tlikes\tpositive\tnegative\ttotal\tclassification\tpositive_comments\tnegative_comments\ttotal_comments')
+        resultsFile.write('\n')
         postDB = FacebookPostDB()
 
         commentDB = FacebookCommentDB()
@@ -298,7 +300,7 @@ class FacebookAPI:
         posts = postDB.readPosts()
         ps = PorterStemmer()
 
-
+        currentPost = 0
 
         for post in posts:
             postText = post.text
@@ -322,7 +324,16 @@ class FacebookAPI:
                 postNegativeWordsCount = 0
                 postNeutralWordsCount = 0
 
-                for word in postTokens:
+                commPositiveWordsCount = 0
+                commNegativeWordsCount = 0
+                commNeutralWordsCount = 0
+
+                negativeComments = 0
+                positiveComments = 0
+                totalComments = 0
+
+
+                for word in cleanPostTokens:
                     indexKind = LanguageProcessor.isNegativeOrPositive(word)
                     if indexKind == 1:
                         postNegativeWordsCount += 1
@@ -331,12 +342,65 @@ class FacebookAPI:
                     else:
                         postNeutralWordsCount += 1
 
-                print('post: ' + postText + ' \npositive: ' + str(postPositiveWordsCount) + ' negative: ' + str(postNegativeWordsCount) + ' neutral: ' + str(postNeutralWordsCount))
 
 
+            #analyze comments from the current post
             comments = commentDB.readComment(post.facebookPostId)
-            #for comment in comments:
-            #    print(comment.body.text)
+            for comment in comments:
+
+                commPositiveWordsCount = 0
+                commNegativeWordsCount = 0
+                commNeutralWordsCount = 0
+
+                commText = comment.body.text
+                #put all chars to lower case
+                commText = commText.lower()
+
+                languageProcessor = LanguageProcessor(commText)
+                languageProcessor.removeSymbols()
+                commTokens = languageProcessor.getTokens()
+
+                #exclude unwanted tokens which contains no letters
+                commTokens = [ tok for tok in commTokens if tok.__len__() > 1 and all(c in string.ascii_letters for c in tok) ]
+
+                #exclude empty lists
+                if commTokens.__len__() > 0:
+                    #clear prefixes, plurals and things like that
+                    cleanCommTokens = [ps.stem(tok, 0, tok.__len__() - 1) for tok in commTokens]
+
+                    for commWord in cleanCommTokens:
+                        indexKind = LanguageProcessor.isNegativeOrPositive(commWord)
+                        if indexKind == 1:
+                            commNegativeWordsCount += 1
+                        elif indexKind == 2:
+                            commPositiveWordsCount += 1
+                        else:
+                            commNeutralWordsCount += 1
+
+                    if commNegativeWordsCount > commPositiveWordsCount:
+                        negativeComments += 1
+                    elif commNegativeWordsCount < commPositiveWordsCount:
+                        positiveComments += 1
+                    totalComments += 1
+
+            totalPostWords =  postNegativeWordsCount + postPositiveWordsCount + postNeutralWordsCount
+
+            postClassification = 'NEUTRAL'
+            if postNegativeWordsCount > postPositiveWordsCount:
+                postClassification = 'NEGATIVE'
+            elif postNegativeWordsCount < postPositiveWordsCount:
+                postClassification = 'POSITIVE'
+
+            resultsFile.write(str(post.facebookUserID) + '\t' + str(post.likeCount) + '\t' + str(postPositiveWordsCount)
+                              + '\t' + str(postNegativeWordsCount) + '\t' + str(totalPostWords) +
+                              '\t' + postClassification + '\t' + str(positiveComments) + '\t' + str(negativeComments) +
+                              '\t' + str(totalComments))
+            resultsFile.write('\n')
+
+            currentPost += 1
+            print(str(currentPost / posts.__len__() * 100.0) + ' COMPLETED...')
+
+
 
 
 
