@@ -1,3 +1,6 @@
+from _operator import pos
+from PreprocessingLayout.language.NegativeDictionary import NegativeDictionary
+from PreprocessingLayout.language.PositiveDictionary import PositiveDictionary
 from PreprocessingLayout.language.RestrictedSymbolsMapping import RestrictedSymbolsMapping
 
 __author__ = 'David'
@@ -20,6 +23,12 @@ class LanguageProcessor:
             self.text = self.text.replace(key, symbols[key])
 
     @classmethod
-    def isNegative(cls, word):
-        negative = Positive()
+    def isNegativeOrPositive(cls, word):
+        negative = NegativeDictionary()
+        positive = PositiveDictionary()
+        if negative.isNegative(word):
+            return 1
+        if positive.isPositive(word):
+            return 2
+        return 0
 

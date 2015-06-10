@@ -320,9 +320,18 @@ class FacebookAPI:
 
                 postPositiveWordsCount = 0
                 postNegativeWordsCount = 0
+                postNeutralWordsCount = 0
 
                 for word in postTokens:
+                    indexKind = LanguageProcessor.isNegativeOrPositive(word)
+                    if indexKind == 1:
+                        postNegativeWordsCount += 1
+                    elif indexKind == 2:
+                        postPositiveWordsCount += 1
+                    else:
+                        postNeutralWordsCount += 1
 
+                print('post: ' + postText + ' \npositive: ' + str(postPositiveWordsCount) + ' negative: ' + str(postNegativeWordsCount) + ' neutral: ' + str(postNeutralWordsCount))
 
 
             comments = commentDB.readComment(post.facebookPostId)

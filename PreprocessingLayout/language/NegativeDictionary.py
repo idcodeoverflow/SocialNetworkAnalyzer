@@ -4787,7 +4787,9 @@ class NegativeDictionary:
         self.negative ['zombie'] = 1
 
     def isNegative(self, word: str):
-        return self.negative[word] == 1
-    
-
+        try:
+            self.negative[word]
+        except KeyError:
+            return False
+        return True
         

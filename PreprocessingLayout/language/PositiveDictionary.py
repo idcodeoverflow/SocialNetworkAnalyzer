@@ -2010,4 +2010,8 @@ class PositiveDictionary:
         self.positive ['zippy'] = 1
 
     def isPositive(self, word):
-        return self.positive[word] == 1
+        try:
+            self.positive[word]
+        except KeyError:
+            return False
+        return True

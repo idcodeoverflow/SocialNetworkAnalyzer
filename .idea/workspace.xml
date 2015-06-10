@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -24,7 +25,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$DBConnection.coverage" NAME="DBConnection Coverage Results" MODIFIED="1424284746021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$HTMLTreatment.coverage" NAME="HTMLTreatment Coverage Results" MODIFIED="1424978857800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PreprocessingLayout" />
-    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1433964246525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$Prueba.coverage" NAME="Prueba Coverage Results" MODIFIED="1433965716891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SocialNetworkAnalyzer$FacebookAPI.coverage" NAME="FacebookAPI Coverage Results" MODIFIED="1424974513061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -60,10 +61,22 @@
       <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5882">
-              <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4867" max-vertical-offset="6035">
+              <caret line="297" column="27" selection-start-line="297" selection-start-column="27" selection-end-line="297" selection-end-column="27" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacebookPostDB.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6315789" vertical-offset="819" max-vertical-offset="1428">
+              <caret line="64" column="92" selection-start-line="64" selection-start-column="92" selection-end-line="64" selection-end-column="92" />
+              <folding>
+                <marker date="1433882546118" expanded="true" signature="2237:2326" placeholder="SELECT idPos..post..." />
               </folding>
             </state>
           </provider>
@@ -89,12 +102,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8295739" vertical-offset="60" max-vertical-offset="527">
-              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="680">
+              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,9 +154,9 @@
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
-        <option value="$PROJECT_DIR$/FacebookAPI.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
+        <option value="$PROJECT_DIR$/FacebookAPI.py" />
       </list>
     </option>
   </component>
@@ -1073,14 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48872182" vertical-offset="757" max-vertical-offset="1428">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -1095,6 +1102,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="629">
           <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,37 +1130,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="680">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.914787" vertical-offset="33907" max-vertical-offset="34391">
+          <caret line="2016" column="19" selection-start-line="2016" selection-start-column="19" selection-end-line="2016" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7443609" vertical-offset="81184" max-vertical-offset="81617">
+          <caret line="4793" column="19" selection-start-line="4793" selection-start-column="19" selection-end-line="4793" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5882">
-          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4867" max-vertical-offset="6035">
+          <caret line="297" column="27" selection-start-line="297" selection-start-column="27" selection-end-line="297" selection-end-column="27" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
+    <entry file="file://$PROJECT_DIR$/DBLayout/FacebookPostDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65914786" vertical-offset="81133" max-vertical-offset="81583">
-          <caret line="4788" column="3" selection-start-line="4788" selection-start-column="3" selection-end-line="4788" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8295739" vertical-offset="33873" max-vertical-offset="34323">
-          <caret line="2012" column="39" selection-start-line="2012" selection-start-column="39" selection-end-line="2012" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8295739" vertical-offset="60" max-vertical-offset="527">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.6315789" vertical-offset="819" max-vertical-offset="1428">
+          <caret line="64" column="92" selection-start-line="64" selection-start-column="92" selection-end-line="64" selection-end-column="92" />
+          <folding>
+            <marker date="1433882546118" expanded="true" signature="2237:2326" placeholder="SELECT idPos..post..." />
+          </folding>
         </state>
       </provider>
     </entry>
