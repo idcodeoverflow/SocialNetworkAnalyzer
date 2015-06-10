@@ -1,5 +1,6 @@
 import datetime
 import json
+import string
 import urllib.request
 import urllib.response
 import urllib.parse
@@ -298,10 +299,22 @@ class FacebookAPI:
 
 
         for post in posts:
-            languageProcessor = LanguageProcessor(post.text)
+            postText = post.text
+
+            #put all chars to lower case
+            postText = postText.lower()
+
+            languageProcessor = LanguageProcessor(postText)
             languageProcessor.removeSymbols()
-            postText = languageProcessor.getTokens()
-            print(postText)
+            postTokens = languageProcessor.getTokens()
+
+            #exclude unwanted tokens which contains no letters
+            postTokens = [ tok for tok in postTokens if tok.__len__() > 1 and all(c in string.ascii_letters for c in tok) ]
+
+            #exclude empty lists
+            if postTokens.__len__() > 0:
+
+                print(postTokens)
 
             comments = commentDB.readComment(post.facebookPostId)
             #for comment in comments:

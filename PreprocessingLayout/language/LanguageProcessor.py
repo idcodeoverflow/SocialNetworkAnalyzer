@@ -17,5 +17,5 @@ class LanguageProcessor:
     def removeSymbols(self):
         symbols = RestrictedSymbolsMapping().symbols
         for key in symbols.keys():
-            self.text.replace(key, symbols[key])
+            self.text = self.text.replace(key, symbols[key])
 
