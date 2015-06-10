@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a83c568-f021-4282-9996-2e9a9857d838" name="Default" comment="Add features in Entities Layout.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\language\negative.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\David\Documents\GitHub\SocialNetworkAnalyzer\PreprocessingLayout\language\positive.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FacebookAPI.py" afterPath="$PROJECT_DIR$/FacebookAPI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" afterPath="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialNetworkAnalyzer.iws" />
@@ -63,7 +60,7 @@
       <file leaf-file-name="FacebookAPI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5865">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5882">
               <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -92,21 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LanguageProcessor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="527">
+            <state vertical-scroll-proportion="0.8295739" vertical-offset="60" max-vertical-offset="527">
               <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NegativeDictionary.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34085214" vertical-offset="0" max-vertical-offset="81481">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -151,8 +138,10 @@
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/Positive.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/RestrictedSymbolsMapping.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/html/HTMLTreatment.py" />
-        <option value="$PROJECT_DIR$/FacebookAPI.py" />
         <option value="$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py" />
+        <option value="$PROJECT_DIR$/FacebookAPI.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py" />
+        <option value="$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py" />
       </list>
     </option>
   </component>
@@ -1092,14 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="34272">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prueba.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
@@ -1143,7 +1124,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FacebookAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5865">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5190" max-vertical-offset="5882">
           <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -1151,18 +1132,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="527">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.65914786" vertical-offset="81133" max-vertical-offset="81583">
+          <caret line="4788" column="3" selection-start-line="4788" selection-start-column="3" selection-end-line="4788" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/NegativeDictionary.py">
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/PositiveDictionary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34085214" vertical-offset="0" max-vertical-offset="81481">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.8295739" vertical-offset="33873" max-vertical-offset="34323">
+          <caret line="2012" column="39" selection-start-line="2012" selection-start-column="39" selection-end-line="2012" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PreprocessingLayout/language/LanguageProcessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8295739" vertical-offset="60" max-vertical-offset="527">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
       </provider>

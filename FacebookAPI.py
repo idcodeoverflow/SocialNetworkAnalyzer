@@ -324,6 +324,7 @@ class FacebookAPI:
                 for word in postTokens:
 
 
+
             comments = commentDB.readComment(post.facebookPostId)
             #for comment in comments:
             #    print(comment.body.text)
