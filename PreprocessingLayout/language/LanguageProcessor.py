@@ -19,3 +19,7 @@ class LanguageProcessor:
         for key in symbols.keys():
             self.text = self.text.replace(key, symbols[key])
 
+    @classmethod
+    def isNegative(cls, word):
+        negative = Positive()
+

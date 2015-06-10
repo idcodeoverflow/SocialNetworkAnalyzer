@@ -17,6 +17,7 @@ from DBLayout.FacebookPostDB import FacebookPostDB
 from EntitiesLayout.FacebookPost import FacebookPost
 from PreprocessingLayout.html.HTMLTreatment import HTMLTreatment
 from PreprocessingLayout.language.LanguageProcessor import LanguageProcessor
+from PreprocessingLayout.language.PorterStemmer import PorterStemmer
 
 
 __author__ = 'David'
@@ -295,6 +296,7 @@ class FacebookAPI:
         commentDB = FacebookCommentDB()
 
         posts = postDB.readPosts()
+        ps = PorterStemmer()
 
 
 
@@ -313,8 +315,14 @@ class FacebookAPI:
 
             #exclude empty lists
             if postTokens.__len__() > 0:
+                #clear prefixes, plurals and things like that
+                cleanPostTokens = [ps.stem(tok, 0, tok.__len__() - 1) for tok in postTokens]
 
-                print(postTokens)
+                postPositiveWordsCount = 0
+                postNegativeWordsCount = 0
+
+                for word in postTokens:
+
 
             comments = commentDB.readComment(post.facebookPostId)
             #for comment in comments:
