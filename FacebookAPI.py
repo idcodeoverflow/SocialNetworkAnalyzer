@@ -334,7 +334,6 @@ class FacebookAPI:
                 positiveComments = 0
                 neutralComments = 0
 
-
                 for word in cleanPostTokens:
                     indexKind = LanguageProcessor.isNegativeOrPositive(word)
                     if indexKind == 1:
@@ -343,9 +342,6 @@ class FacebookAPI:
                         postPositiveWordsCount += 1
                     else:
                         postNeutralWordsCount += 1
-
-
-
             #analyze comments from the current post
             comments = commentDB.readComment(post.facebookPostId)
             for comment in comments:
@@ -402,13 +398,7 @@ class FacebookAPI:
 
             currentPost += 1
             print(str(currentPost / posts.__len__() * 100.0) + ' COMPLETED...')
-
-
-
-
-
         resultsFile.close()
-        return 0
 
 
 
